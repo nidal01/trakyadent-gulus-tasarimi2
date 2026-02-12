@@ -11,6 +11,7 @@ import {
   Stethoscope,
   ClipboardCheck,
   CheckCircle2,
+  ChevronDown,
 } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
@@ -124,6 +125,7 @@ const treatments = [
 export function Treatments() {
   const [activeTab, setActiveTab] = useState(0)
   const [visible, setVisible] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -143,7 +145,7 @@ export function Treatments() {
     <section id="tedaviler" className="bg-background py-16 lg:py-24" ref={ref}>
       <div className="mx-auto max-w-7xl px-4">
         <div
-          className={`mx-auto mb-12 max-w-2xl text-center transition-all duration-700 lg:mb-16 ${
+          className={`mx-auto mb-10 max-w-2xl text-center transition-all duration-700 lg:mb-16 ${
             visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
@@ -153,93 +155,140 @@ export function Treatments() {
           <h2 className="mb-4 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
             Çocuğunuz İçin En İyi Tedavi Seçenekleri
           </h2>
-          <p className="text-lg leading-relaxed text-muted-foreground">
+          <p className="text-base leading-relaxed text-muted-foreground lg:text-lg">
             Uzman pedodonti ekibimiz, modern tekniklerle çocuklara özel konforlu
             tedavi süreci sunar.
           </p>
         </div>
 
         <div
-          className={`grid gap-8 lg:grid-cols-[320px_1fr] transition-all duration-700 ${
+          className={`transition-all duration-700 ${
             visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
           style={{ transitionDelay: "200ms" }}
         >
-          {/* Tab buttons - Left sidebar */}
-          <div className="flex flex-row gap-2 overflow-x-auto pb-2 lg:flex-col lg:gap-1.5 lg:overflow-x-visible lg:pb-0">
-            {treatments.map((treatment, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveTab(index)}
-                className={`flex flex-shrink-0 items-center gap-3 rounded-xl px-4 py-3 text-left transition-all lg:w-full ${
-                  activeTab === index
-                    ? "bg-primary text-primary-foreground shadow-lg"
-                    : "bg-card text-foreground hover:bg-muted border border-border"
+          {/* Mobile: Dropdown selector */}
+          <div className="mb-4 lg:hidden">
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="flex w-full items-center justify-between rounded-xl border border-border bg-card px-4 py-3.5 text-left shadow-sm"
+            >
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                  <activeTreatment.icon className="h-5 w-5 text-primary" />
+                </div>
+                <span className="font-semibold text-foreground">{activeTreatment.title}</span>
+              </div>
+              <ChevronDown
+                className={`h-5 w-5 flex-shrink-0 text-muted-foreground transition-transform duration-200 ${
+                  mobileOpen ? "rotate-180" : ""
                 }`}
-              >
-                <treatment.icon
-                  className={`h-5 w-5 flex-shrink-0 ${
-                    activeTab === index ? "text-primary-foreground" : "text-primary"
-                  }`}
-                />
-                <span className="whitespace-nowrap text-sm font-semibold lg:whitespace-normal">
-                  {treatment.title}
-                </span>
-              </button>
-            ))}
+              />
+            </button>
+
+            {mobileOpen && (
+              <div className="mt-2 overflow-hidden rounded-xl border border-border bg-card shadow-lg">
+                {treatments.map((treatment, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setActiveTab(index)
+                      setMobileOpen(false)
+                    }}
+                    className={`flex w-full items-center gap-3 px-4 py-3 text-left transition-colors ${
+                      activeTab === index
+                        ? "bg-primary/10 text-primary"
+                        : "text-foreground hover:bg-muted"
+                    } ${index > 0 ? "border-t border-border" : ""}`}
+                  >
+                    <treatment.icon
+                      className={`h-5 w-5 flex-shrink-0 ${
+                        activeTab === index ? "text-primary" : "text-muted-foreground"
+                      }`}
+                    />
+                    <span className="text-sm font-semibold">{treatment.title}</span>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
-          {/* Tab content - Right area */}
-          <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-            <div className="p-6 lg:p-10">
-              <div className="mb-6 flex items-center gap-4">
-                <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-primary/10">
-                  <activeTreatment.icon className="h-8 w-8 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-serif text-2xl font-extrabold text-foreground lg:text-3xl">
-                    {activeTreatment.title}
-                  </h3>
-                  <p className="mt-1 text-sm font-medium text-primary">
-                    Trakyadent Pedodonti Merkezi
-                  </p>
-                </div>
-              </div>
-
-              <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
-                {activeTreatment.longDesc}
-              </p>
-
-              <div className="mb-8 rounded-xl bg-muted/50 p-6">
-                <h4 className="mb-4 font-serif text-lg font-bold text-foreground">
-                  Tedavinin Avantajları
-                </h4>
-                <ul className="flex flex-col gap-3">
-                  {activeTreatment.benefits.map((benefit, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[hsl(var(--accent))]" />
-                      <span className="text-muted-foreground">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="https://wa.me/905001234567"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-6 py-3.5 text-sm font-bold text-[hsl(var(--accent-foreground))] shadow-md transition-all hover:scale-[1.02] hover:shadow-lg"
+          {/* Desktop: Side tabs + Content */}
+          <div className="grid gap-8 lg:grid-cols-[280px_1fr]">
+            {/* Tab buttons - Desktop sidebar */}
+            <div className="hidden flex-col gap-1.5 lg:flex">
+              {treatments.map((treatment, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveTab(index)}
+                  className={`flex items-center gap-3 rounded-xl px-4 py-3 text-left transition-all ${
+                    activeTab === index
+                      ? "bg-primary text-primary-foreground shadow-lg"
+                      : "bg-card text-foreground hover:bg-muted border border-border"
+                  }`}
                 >
-                  <WhatsAppIcon className="h-5 w-5" />
-                  Bu Tedavi Hakkında Bilgi Al
-                </a>
-                <a
-                  href="tel:4442289"
-                  className="flex items-center justify-center gap-2 rounded-xl border-2 border-primary px-6 py-3.5 text-sm font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-                >
-                  444 22 89 Hemen Ara
-                </a>
+                  <treatment.icon
+                    className={`h-5 w-5 flex-shrink-0 ${
+                      activeTab === index ? "text-primary-foreground" : "text-primary"
+                    }`}
+                  />
+                  <span className="text-sm font-semibold">{treatment.title}</span>
+                </button>
+              ))}
+            </div>
+
+            {/* Tab content */}
+            <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+              <div className="p-5 sm:p-6 lg:p-10">
+                <div className="mb-5 flex items-center gap-3 sm:mb-6 sm:gap-4">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-primary/10 sm:h-16 sm:w-16">
+                    <activeTreatment.icon className="h-6 w-6 text-primary sm:h-8 sm:w-8" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-xl font-extrabold text-foreground sm:text-2xl lg:text-3xl">
+                      {activeTreatment.title}
+                    </h3>
+                    <p className="mt-0.5 text-xs font-medium text-primary sm:mt-1 sm:text-sm">
+                      Trakyadent Pedodonti Merkezi
+                    </p>
+                  </div>
+                </div>
+
+                <p className="mb-5 text-sm leading-relaxed text-muted-foreground sm:mb-6 sm:text-base lg:text-lg">
+                  {activeTreatment.longDesc}
+                </p>
+
+                <div className="mb-6 rounded-xl bg-muted/50 p-4 sm:mb-8 sm:p-6">
+                  <h4 className="mb-3 font-serif text-base font-bold text-foreground sm:mb-4 sm:text-lg">
+                    Tedavinin Avantajları
+                  </h4>
+                  <ul className="flex flex-col gap-2.5 sm:gap-3">
+                    {activeTreatment.benefits.map((benefit, i) => (
+                      <li key={i} className="flex items-start gap-2.5 sm:gap-3">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-[hsl(var(--accent))] sm:h-5 sm:w-5" />
+                        <span className="text-sm text-muted-foreground sm:text-base">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href="https://wa.me/905001234567"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-5 py-3 text-sm font-bold text-[hsl(var(--accent-foreground))] shadow-md transition-all hover:scale-[1.02] hover:shadow-lg sm:px-6 sm:py-3.5"
+                  >
+                    <WhatsAppIcon className="h-5 w-5" />
+                    Bu Tedavi Hakkında Bilgi Al
+                  </a>
+                  <a
+                    href="tel:4442289"
+                    className="flex items-center justify-center gap-2 rounded-xl border-2 border-primary px-5 py-3 text-sm font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground sm:px-6 sm:py-3.5"
+                  >
+                    444 22 89 Hemen Ara
+                  </a>
+                </div>
               </div>
             </div>
           </div>

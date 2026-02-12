@@ -7,7 +7,7 @@ import { WhatsAppIcon } from "./whatsapp-icon"
 
 export function Footer() {
   return (
-    <footer className="bg-[hsl(var(--topbar))] text-[hsl(var(--topbar-foreground))]">
+    <footer className="bg-[hsl(var(--topbar))] pb-16 text-[hsl(var(--topbar-foreground))] lg:pb-0">
       <div className="mx-auto max-w-7xl px-4 py-12 lg:py-16">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
@@ -89,7 +89,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2 text-sm text-[hsl(var(--topbar-foreground))]/70">
                 <MapPin className="mt-0.5 h-4 w-4 text-primary" />
-                <span>Edirne, Keşan, Kırklareli, Lüleburgaz</span>
+                <span>Çerkezköy, Çorlu, Lüleburgaz, Maslak</span>
               </li>
             </ul>
           </div>

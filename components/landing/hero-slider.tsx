@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect, useCallback } from "react"
+import React, { useState, useEffect, useCallback, useRef } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
@@ -24,6 +24,8 @@ const slides = [
 
 export function HeroSlider() {
   const [current, setCurrent] = useState(0)
+  const touchStartX = useRef(0)
+  const touchEndX = useRef(0)
 
   const next = useCallback(() => {
     setCurrent((prev) => (prev + 1) % slides.length)
@@ -38,8 +40,33 @@ export function HeroSlider() {
     return () => clearInterval(timer)
   }, [next])
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX
+  }
+
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        next()
+      } else {
+        prev()
+      }
+    }
+  }
+
   return (
-    <section id="hero" className="relative h-[85vh] min-h-[550px] overflow-hidden lg:h-[90vh]">
+    <section
+      id="hero"
+      className="relative h-[80vh] min-h-[500px] overflow-hidden sm:h-[85vh] lg:h-[90vh]"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -57,8 +84,8 @@ export function HeroSlider() {
           <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,40%,12%)]/80 via-[hsl(210,40%,12%)]/50 to-transparent" />
 
           <div className="absolute inset-0 flex items-center">
-            <div className="mx-auto w-full max-w-7xl px-4">
-              <div className="max-w-2xl">
+            <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
+              <div className="max-w-xl lg:max-w-2xl">
                 <div
                   className={`transition-all duration-700 ${
                     index === current
@@ -67,13 +94,13 @@ export function HeroSlider() {
                   }`}
                   style={{ transitionDelay: "200ms" }}
                 >
-                  <span className="mb-4 inline-block rounded-full bg-[hsl(var(--accent))]/20 px-4 py-1.5 text-sm font-semibold text-[hsl(var(--accent))]">
+                  <span className="mb-3 inline-block rounded-full bg-[hsl(var(--accent))]/20 px-3 py-1 text-xs font-semibold text-[hsl(var(--accent))] sm:mb-4 sm:px-4 sm:py-1.5 sm:text-sm">
                     Trakyadent Pedodonti Merkezi
                   </span>
                 </div>
 
                 <h1
-                  className={`mb-4 font-serif text-4xl font-extrabold leading-tight text-[hsl(0,0%,100%)] transition-all duration-700 md:text-5xl lg:text-6xl ${
+                  className={`mb-3 font-serif text-2xl font-extrabold leading-tight text-[hsl(0,0%,100%)] transition-all duration-700 sm:mb-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl ${
                     index === current
                       ? "translate-y-0 opacity-100"
                       : "translate-y-8 opacity-0"
@@ -88,7 +115,7 @@ export function HeroSlider() {
                 </h1>
 
                 <p
-                  className={`mb-8 max-w-lg text-lg leading-relaxed text-[hsl(0,0%,100%)]/80 transition-all duration-700 md:text-xl ${
+                  className={`mb-6 max-w-lg text-sm leading-relaxed text-[hsl(0,0%,100%)]/80 transition-all duration-700 sm:mb-8 sm:text-base md:text-lg lg:text-xl ${
                     index === current
                       ? "translate-y-0 opacity-100"
                       : "translate-y-8 opacity-0"
@@ -110,14 +137,14 @@ export function HeroSlider() {
                     href="https://wa.me/905001234567"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-6 py-3.5 text-base font-bold text-[hsl(var(--accent-foreground))] shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+                    className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-5 py-3 text-sm font-bold text-[hsl(var(--accent-foreground))] shadow-lg transition-all hover:scale-105 hover:shadow-xl sm:px-6 sm:py-3.5 sm:text-base"
                   >
                     <WhatsAppIcon className="h-5 w-5" />
-                    WhatsApp ile Randevu Al
+                    WhatsApp ile Randevu
                   </a>
                   <a
                     href="tel:4442289"
-                    className="flex items-center justify-center gap-2 rounded-xl border-2 border-[hsl(0,0%,100%)]/30 bg-[hsl(0,0%,100%)]/10 px-6 py-3.5 text-base font-bold text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:border-[hsl(0,0%,100%)]/50 hover:bg-[hsl(0,0%,100%)]/20"
+                    className="flex items-center justify-center gap-2 rounded-xl border-2 border-[hsl(0,0%,100%)]/30 bg-[hsl(0,0%,100%)]/10 px-5 py-3 text-sm font-bold text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:border-[hsl(0,0%,100%)]/50 hover:bg-[hsl(0,0%,100%)]/20 sm:px-6 sm:py-3.5 sm:text-base"
                   >
                     444 22 89 Hemen Arayın
                   </a>
@@ -128,7 +155,7 @@ export function HeroSlider() {
         </div>
       ))}
 
-      {/* Slider controls - moved to bottom corners to not block text */}
+      {/* Slider controls - bottom right, desktop only */}
       <button
         onClick={prev}
         className="absolute bottom-24 right-24 z-10 hidden h-12 w-12 items-center justify-center rounded-full bg-[hsl(0,0%,100%)]/20 text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:bg-[hsl(0,0%,100%)]/40 lg:flex"
@@ -145,7 +172,7 @@ export function HeroSlider() {
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 gap-3">
+      <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-3 sm:bottom-8">
         {slides.map((_, i) => (
           <button
             key={i}

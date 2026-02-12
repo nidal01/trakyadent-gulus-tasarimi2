@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react"
 import Image from "next/image"
-import { Phone } from "lucide-react"
+import { Phone, Stethoscope } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
 export function StickyButtons() {
@@ -43,37 +43,55 @@ export function StickyButtons() {
         </a>
       </div>
 
-      {/* Mobile: Fixed bottom bar */}
+      {/* Mobile: Fixed bottom bar with center bubble */}
       <div
-        className={`fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-card shadow-2xl transition-all duration-500 lg:hidden ${
+        className={`fixed bottom-0 left-0 right-0 z-50 transition-all duration-500 lg:hidden ${
           show ? "translate-y-0" : "translate-y-full"
         }`}
       >
-        <div className="flex items-center">
+        {/* Center bubble - positioned above the bar */}
+        <div className="absolute -top-8 left-1/2 z-10 -translate-x-1/2">
           <a
             href="https://wa.me/905001234567"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-1 items-center justify-center gap-2 bg-[hsl(142,70%,45%)] py-4 text-sm font-bold text-[hsl(0,0%,100%)]"
+            className="relative flex h-16 w-16 items-center justify-center rounded-full border-4 border-card bg-card shadow-xl"
+          >
+            <Image
+              src="/images/favicon.png"
+              alt="Trakyadent"
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-full object-contain"
+            />
+            {/* Small WhatsApp badge */}
+            <span className="absolute -bottom-0.5 -right-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-[hsl(142,70%,45%)] shadow-md">
+              <WhatsAppIcon className="h-3.5 w-3.5 text-[hsl(0,0%,100%)]" />
+            </span>
+          </a>
+        </div>
+
+        {/* Bar */}
+        <div className="flex items-stretch bg-primary shadow-2xl">
+          <a
+            href="https://wa.me/905001234567"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-1 flex-col items-center justify-center gap-1 py-3 text-primary-foreground transition-opacity active:opacity-80"
           >
             <WhatsAppIcon className="h-5 w-5" />
-            WhatsApp
+            <span className="text-[11px] font-bold leading-none">{"Whatsapp 7/24"}</span>
           </a>
-          <div className="flex items-center justify-center px-3">
-            <Image
-              src="/images/trakyadent-logo.png"
-              alt="Trakyadent"
-              width={80}
-              height={32}
-              className="h-8 w-auto object-contain"
-            />
-          </div>
+
+          {/* Center spacer for the bubble */}
+          <div className="w-20" />
+
           <a
             href="tel:4442289"
-            className="flex flex-1 items-center justify-center gap-2 bg-primary py-4 text-sm font-bold text-primary-foreground"
+            className="flex flex-1 flex-col items-center justify-center gap-1 py-3 text-primary-foreground transition-opacity active:opacity-80"
           >
-            <Phone className="h-5 w-5" />
-            Hemen Ara
+            <Stethoscope className="h-5 w-5" />
+            <span className="text-[11px] font-bold leading-none">444 22 89</span>
           </a>
         </div>
       </div>

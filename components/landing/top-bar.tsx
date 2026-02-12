@@ -17,36 +17,30 @@ const navItems = [
 
 export function TopBar() {
   return (
-    <>
-      {/* Top info bar */}
-      <div className="bg-[hsl(var(--topbar))] text-[hsl(var(--topbar-foreground))]">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-sm">
-          <span className="hidden font-medium md:block">
-            Trakyadent Pedodonti Merkezi | Sağlıklı Gülüşler İçin Yanınızdayız!
-          </span>
-          <span className="block text-xs font-medium md:hidden">
-            Trakyadent Pedodonti Merkezi
-          </span>
-          <div className="flex items-center gap-4">
-            <a
-              href="tel:4442289"
-              className="flex items-center gap-1.5 transition-colors hover:text-[hsl(var(--chart-4))]"
-            >
-              <Phone className="h-3.5 w-3.5" />
-              <span className="font-semibold">444 22 89</span>
-            </a>
-            <a
-              href="https://wa.me/905001234567"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-md bg-[hsl(var(--accent))] px-3 py-1 text-xs font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105"
-            >
-              Hemen Bilgi Al!
-            </a>
-          </div>
+    <div className="bg-[hsl(var(--topbar))] text-[hsl(var(--topbar-foreground))]">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-3 py-1.5 sm:px-4 sm:py-2">
+        <span className="hidden text-sm font-medium md:block">
+          Trakyadent Pedodonti Merkezi | Sağlıklı Gülüşler İçin Yanınızdayız!
+        </span>
+        <div className="flex w-full items-center justify-between gap-2 md:w-auto md:justify-end md:gap-4">
+          <a
+            href="tel:4442289"
+            className="flex items-center gap-1 whitespace-nowrap text-xs transition-colors hover:text-[hsl(var(--chart-4))] sm:gap-1.5 sm:text-sm"
+          >
+            <Phone className="h-3 w-3 flex-shrink-0 sm:h-3.5 sm:w-3.5" />
+            <span className="font-semibold">444 22 89</span>
+          </a>
+          <a
+            href="https://wa.me/905001234567"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whitespace-nowrap rounded-md bg-[hsl(var(--accent))] px-2.5 py-1 text-xs font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105 sm:px-3"
+          >
+            Hemen Bilgi Al!
+          </a>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
