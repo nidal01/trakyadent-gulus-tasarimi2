@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState, useRef, useCallback, useEffect } from "react"
-import Image from "next/image"
 import { ChevronLeft, ChevronRight, Play } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
@@ -113,11 +112,12 @@ export function DoctorTeam() {
               <div key={index} className="w-48 flex-shrink-0 sm:w-52 lg:w-56">
                 <div className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
                   <div className="relative h-48 overflow-hidden sm:h-56">
-                    <Image
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src={doctor.image}
                       alt={doctor.name}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[hsl(210,40%,12%)]/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                   </div>
