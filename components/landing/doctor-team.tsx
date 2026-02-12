@@ -6,66 +6,36 @@ import { ChevronLeft, ChevronRight, Play } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
 const doctors = [
-  {
-    name: "Uzm. Dr. Dt. Umut Öztürk",
-    title: "Ortodonti Uzmanı",
-    image: "/images/doctor-1.jpg",
-  },
-  {
-    name: "Dt. Hüseyin Erdinç",
-    title: "Kurucu Diş Hekimi",
-    image: "/images/doctor-2.jpg",
-  },
-  {
-    name: "Dr. Dt. Yasemin Zeynep Arslan",
-    title: "Ağız, Diş ve Çene Cerrahisi Uzmanı",
-    image: "/images/doctor-3.jpg",
-  },
-  {
-    name: "Dr. Dt. Gülperi Kocaman",
-    title: "Periodontoloji Uzmanı",
-    image: "/images/doctor-4.jpg",
-  },
-  {
-    name: "Dr. Dt. Merve Nur Sönmez",
-    title: "Endodonti Uzmanı",
-    image: "/images/doctor-1.jpg",
-  },
-  {
-    name: "Dt. Emre Erdinç",
-    title: "İmplantoloji ve Protez Uzmanı",
-    image: "/images/doctor-2.jpg",
-  },
-  {
-    name: "Dr. Dt. Gizem Nur Zeybek",
-    title: "Pedodonti Uzmanı",
-    image: "/images/doctor-3.jpg",
-  },
-  {
-    name: "Dr. Dt. Tuğçe Madenoğlu",
-    title: "Pedodonti Uzmanı",
-    image: "/images/doctor-4.jpg",
-  },
-  {
-    name: "Dt. Cansu İnce",
-    title: "Diş Hekimi",
-    image: "/images/doctor-1.jpg",
-  },
-  {
-    name: "Dt. Meral Nur Erdinç",
-    title: "Diş Hekimi",
-    image: "/images/doctor-2.jpg",
-  },
-  {
-    name: "Dt. Beyza Kayabaş",
-    title: "Diş Hekimi",
-    image: "/images/doctor-3.jpg",
-  },
-  {
-    name: "Dt. Barış Yılmaz",
-    title: "Diş Hekimi",
-    image: "/images/doctor-4.jpg",
-  },
+  { name: "Dt. Subaykan PANDAR", title: "Dis Hekimi - Kurucu YK Uyesi", image: "/images/doctor-1.jpg" },
+  { name: "Dt. Emre PANDAR", title: "Cerkezkoy Klinik Bashekimi - YK Baskani", image: "/images/doctor-2.jpg" },
+  { name: "Dt. Demet PANDAR", title: "Dis Hekimi - YK Uyesi", image: "/images/doctor-3.jpg" },
+  { name: "Dt. Hikmet AKGUL", title: "Luleburgaz Klinik Bashekimi", image: "/images/doctor-4.jpg" },
+  { name: "Dr. Dt. Ezgi AKCE", title: "Maslak Klinik Bashekimi - Periodontoloji", image: "/images/doctor-1.jpg" },
+  { name: "Dt. Buse KASIKCI", title: "Corlu Klinik Bashekimi", image: "/images/doctor-3.jpg" },
+  { name: "Dr. Dt. Fuad NAJAFI", title: "Agiz, Dis ve Cene Cerrahisi", image: "/images/doctor-2.jpg" },
+  { name: "Dr. Dt. Burak AKCE", title: "Ortodonti", image: "/images/doctor-4.jpg" },
+  { name: "Uzm. Dt. Bahar AKSAN YENILMEZ", title: "Pedodonti Uzmani", image: "/images/doctor-3.jpg" },
+  { name: "Uzm. Dt. Aysegul ATILLA", title: "Protez Uzmani", image: "/images/doctor-1.jpg" },
+  { name: "Uzm. Dt. Ufuk KARACA", title: "Periodontoloji Uzmani", image: "/images/doctor-2.jpg" },
+  { name: "Uzm. Dt. Gamze KILIC", title: "Pedodonti Uzmani", image: "/images/doctor-3.jpg" },
+  { name: "Uzm. Dt. Mert GOKSU", title: "Endodonti Uzmani", image: "/images/doctor-4.jpg" },
+  { name: "Uzm. Dr. Yasin ESEN", title: "Anestezi ve Reanimasyon Uzmani", image: "/images/doctor-2.jpg" },
+  { name: "Dr. Dt. Yasemin CANPOLAT", title: "Ortodonti", image: "/images/doctor-1.jpg" },
+  { name: "Dr. Dt. Omer Faruk YENILMEZ", title: "Endodonti", image: "/images/doctor-4.jpg" },
+  { name: "Dt. Nehir DENIZ", title: "Dis Hekimi", image: "/images/doctor-3.jpg" },
+  { name: "Dt. Hilal SAYIN VAROL", title: "Dis Hekimi", image: "/images/doctor-1.jpg" },
+  { name: "Dt. Huseyin TIRPAN", title: "Dis Hekimi", image: "/images/doctor-2.jpg" },
+  { name: "Dt. Maruf OZTURK", title: "Dis Hekimi", image: "/images/doctor-4.jpg" },
+  { name: "Dt. Pinar ERSAN", title: "Dis Hekimi", image: "/images/doctor-3.jpg" },
+  { name: "Dt. Ulas Unal AKTAS", title: "Dis Hekimi", image: "/images/doctor-2.jpg" },
+  { name: "Dt. Buse BILGIN", title: "Dis Hekimi", image: "/images/doctor-1.jpg" },
+  { name: "Dt. Merve Gokkus MUMCU", title: "Dis Hekimi", image: "/images/doctor-3.jpg" },
+  { name: "Dt. Mert Tufan BILGE", title: "Dis Hekimi", image: "/images/doctor-4.jpg" },
+  { name: "Dt. Sura BAS", title: "Dis Hekimi", image: "/images/doctor-1.jpg" },
+  { name: "Dt. Ozan TURKMEN", title: "Dis Hekimi", image: "/images/doctor-2.jpg" },
+  { name: "Dt. Elif Betul UGRAC", title: "Dis Hekimi", image: "/images/doctor-3.jpg" },
+  { name: "Dt. Fatih Serdar UGRAC", title: "Dis Hekimi", image: "/images/doctor-4.jpg" },
+  { name: "Dt. Seymanur BILGIC", title: "Dis Hekimi", image: "/images/doctor-1.jpg" },
 ]
 
 export function DoctorTeam() {
@@ -106,21 +76,20 @@ export function DoctorTeam() {
             Uzman Ekibimiz
           </span>
           <h2 className="mb-4 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
-            Uzman Hekim Kadromuz
+            30 Uzman Hekim Kadromuz
           </h2>
           <p className="text-base text-muted-foreground lg:text-lg">
-            Minik Gülüşler İçin Büyük Uzmanlık!
+            Minik Gulusler Icin Buyuk Uzmanlik! Tum hekimlerimiz ile tanisin.
           </p>
         </div>
 
         {/* Carousel */}
         <div className="relative">
-          {/* Scroll buttons */}
           {canScrollLeft && (
             <button
               onClick={() => scroll("left")}
-              className="absolute -left-3 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-card shadow-lg border border-border text-foreground transition-all hover:bg-primary hover:text-primary-foreground lg:flex"
-              aria-label="Önceki hekimler"
+              className="absolute -left-2 top-1/3 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-lg transition-all hover:bg-primary hover:text-primary-foreground lg:-left-4 lg:flex"
+              aria-label="Onceki hekimler"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -128,7 +97,7 @@ export function DoctorTeam() {
           {canScrollRight && (
             <button
               onClick={() => scroll("right")}
-              className="absolute -right-3 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-card shadow-lg border border-border text-foreground transition-all hover:bg-primary hover:text-primary-foreground lg:flex"
+              className="absolute -right-2 top-1/3 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-lg transition-all hover:bg-primary hover:text-primary-foreground lg:-right-4 lg:flex"
               aria-label="Sonraki hekimler"
             >
               <ChevronRight className="h-5 w-5" />
@@ -137,16 +106,13 @@ export function DoctorTeam() {
 
           <div
             ref={scrollRef}
-            className="scrollbar-none flex gap-4 overflow-x-auto scroll-smooth pb-4 sm:gap-5 lg:gap-6"
+            className="flex gap-4 overflow-x-auto scroll-smooth pb-4 sm:gap-5 lg:gap-6"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {doctors.map((doctor, index) => (
-              <div
-                key={index}
-                className="w-56 flex-shrink-0 sm:w-60 lg:w-64"
-              >
+              <div key={index} className="w-48 flex-shrink-0 sm:w-52 lg:w-56">
                 <div className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
-                  <div className="relative h-56 overflow-hidden sm:h-64">
+                  <div className="relative h-48 overflow-hidden sm:h-56">
                     <Image
                       src={doctor.image}
                       alt={doctor.name}
@@ -155,26 +121,33 @@ export function DoctorTeam() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[hsl(210,40%,12%)]/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                   </div>
-                  <div className="p-4 text-center">
-                    <h3 className="mb-0.5 font-serif text-sm font-bold text-foreground sm:text-base">
+                  <div className="p-3 text-center sm:p-4">
+                    <h3 className="mb-0.5 font-serif text-xs font-bold text-foreground sm:text-sm">
                       {doctor.name}
                     </h3>
-                    <p className="mb-3 text-xs font-medium text-primary sm:text-sm">
+                    <p className="mb-2.5 text-[11px] font-medium text-primary sm:mb-3 sm:text-xs">
                       {doctor.title}
                     </p>
                     <a
                       href="https://wa.me/905001234567"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-3 py-2 text-xs font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105 sm:text-sm"
+                      className="flex items-center justify-center gap-1.5 rounded-lg bg-[hsl(var(--accent))] px-3 py-2 text-xs font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105"
                     >
-                      <WhatsAppIcon className="h-4 w-4" />
-                      WhatsApp
+                      <WhatsAppIcon className="h-3.5 w-3.5" />
+                      Randevu Al
                     </a>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Scroll indicator for mobile */}
+          <div className="mt-3 flex items-center justify-center gap-1.5 text-xs text-muted-foreground lg:hidden">
+            <ChevronLeft className="h-3.5 w-3.5" />
+            <span>Kaydirarak tum hekimleri gorun</span>
+            <ChevronRight className="h-3.5 w-3.5" />
           </div>
         </div>
 
@@ -182,19 +155,19 @@ export function DoctorTeam() {
         <div className="mt-16 lg:mt-20">
           <div className="mx-auto mb-10 max-w-2xl text-center lg:mb-12">
             <h2 className="mb-4 font-serif text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl">
-              Hekimlerimiz Anlatıyor!
+              Hekimlerimiz Anlatiyor!
             </h2>
             <p className="text-base text-muted-foreground lg:text-lg">
-              Uzman hekimlerimizin bilgilendirici videolarıyla tedavi süreçleri
-              hakkında detaylı bilgi alın.
+              Uzman hekimlerimizin bilgilendirici videolariyla tedavi surecleri
+              hakkinda detayli bilgi alin.
             </p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {[
-              "Çocuklarda Diş Bakımı",
+              "Cocuklarda Dis Bakimi",
               "Dijital Anestezi Nedir?",
-              "Süt Dişleri Neden Önemli?",
+              "Sut Disleri Neden Onemli?",
             ].map((title, index) => (
               <div
                 key={index}

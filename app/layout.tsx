@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   title: 'Trakyadent Pedodonti | Cocuk Dis Sagligi Merkezi',
   description:
     'Trakyadent Pedodonti Merkezi - Cocuk dis sagliginda uzman cozum. 36 yillik deneyim, dijital anestezi, korkusuz tedavi deneyimi. Hemen randevu alin!',
+  icons: {
+    icon: '/images/favicon.png',
+    shortcut: '/images/favicon.png',
+    apple: '/images/favicon.png',
+  },
 }
 
 export const viewport: Viewport = {

@@ -8,17 +8,17 @@ import { WhatsAppIcon } from "./whatsapp-icon"
 const slides = [
   {
     image: "/images/hero-child-smile.jpg",
-    title: "Çocuk Diş Sağlığında Uzman Çözüm",
+    title: "Cocuk Dis Sagliginda Uzman Cozum",
     titleHighlight: "Trakyadent Pedodonti",
     subtitle:
-      "Minik gülüşler için korkusuz, güvenli ve sevgi dolu bir diş tedavi deneyimi",
+      "Minik gulusler icin korkusuz, guvenli ve sevgi dolu bir dis tedavi deneyimi",
   },
   {
     image: "/images/hero-digital-anesthesia.jpg",
     title: "Konforlu Tedavi,",
-    titleHighlight: "Dijital Anestezi Güvencesi",
+    titleHighlight: "Dijital Anestezi Guvencesi",
     subtitle:
-      "Dijital anestezi sayesinde çocuklar için daha konforlu tedavi",
+      "Dijital anestezi sayesinde cocuklar icin daha konforlu tedavi",
   },
 ]
 
@@ -26,6 +26,7 @@ export function HeroSlider() {
   const [current, setCurrent] = useState(0)
   const touchStartX = useRef(0)
   const touchEndX = useRef(0)
+  const isDragging = useRef(false)
 
   const next = useCallback(() => {
     setCurrent((prev) => (prev + 1) % slides.length)
@@ -42,27 +43,29 @@ export function HeroSlider() {
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX
+    isDragging.current = true
   }
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    touchEndX.current = e.touches[0].clientX
+    if (isDragging.current) {
+      touchEndX.current = e.touches[0].clientX
+    }
   }
 
   const handleTouchEnd = () => {
+    if (!isDragging.current) return
+    isDragging.current = false
     const diff = touchStartX.current - touchEndX.current
     if (Math.abs(diff) > 50) {
-      if (diff > 0) {
-        next()
-      } else {
-        prev()
-      }
+      if (diff > 0) next()
+      else prev()
     }
   }
 
   return (
     <section
       id="hero"
-      className="relative h-[80vh] min-h-[500px] overflow-hidden sm:h-[85vh] lg:h-[90vh]"
+      className="relative h-[75vh] min-h-[480px] overflow-hidden sm:h-[80vh] lg:h-[88vh]"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -78,8 +81,9 @@ export function HeroSlider() {
             src={slide.image}
             alt={slide.title}
             fill
-            className="object-cover"
+            className="object-cover object-top"
             priority={index === 0}
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,40%,12%)]/80 via-[hsl(210,40%,12%)]/50 to-transparent" />
 
@@ -146,7 +150,7 @@ export function HeroSlider() {
                     href="tel:4442289"
                     className="flex items-center justify-center gap-2 rounded-xl border-2 border-[hsl(0,0%,100%)]/30 bg-[hsl(0,0%,100%)]/10 px-5 py-3 text-sm font-bold text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:border-[hsl(0,0%,100%)]/50 hover:bg-[hsl(0,0%,100%)]/20 sm:px-6 sm:py-3.5 sm:text-base"
                   >
-                    444 22 89 Hemen Arayın
+                    444 22 89 Hemen Arayin
                   </a>
                 </div>
               </div>
@@ -159,7 +163,7 @@ export function HeroSlider() {
       <button
         onClick={prev}
         className="absolute bottom-24 right-24 z-10 hidden h-12 w-12 items-center justify-center rounded-full bg-[hsl(0,0%,100%)]/20 text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:bg-[hsl(0,0%,100%)]/40 lg:flex"
-        aria-label="Önceki slayt"
+        aria-label="Onceki slayt"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
@@ -178,7 +182,9 @@ export function HeroSlider() {
             key={i}
             onClick={() => setCurrent(i)}
             className={`h-3 rounded-full transition-all ${
-              i === current ? "w-8 bg-[hsl(var(--accent))]" : "w-3 bg-[hsl(0,0%,100%)]/40"
+              i === current
+                ? "w-8 bg-[hsl(var(--accent))]"
+                : "w-3 bg-[hsl(0,0%,100%)]/40"
             }`}
             aria-label={`Slayt ${i + 1}`}
           />

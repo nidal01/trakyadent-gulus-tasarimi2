@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
+import Image from "next/image"
 import { Send, Play, CheckCircle } from "lucide-react"
 
 function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
@@ -20,13 +21,25 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
 
   if (submitted) {
     return (
-      <div className={`rounded-2xl p-8 text-center ${isDark ? "bg-[hsl(var(--accent))]/20" : "bg-[hsl(var(--accent))]/10"}`}>
-        <CheckCircle className={`mx-auto mb-3 h-12 w-12 ${isDark ? "text-[hsl(var(--accent))]" : "text-[hsl(var(--accent))]"}`} />
-        <h3 className={`mb-2 text-xl font-bold ${isDark ? "text-primary-foreground" : "text-foreground"}`}>
-          Talebiniz Alındı!
+      <div
+        className={`rounded-2xl p-8 text-center ${
+          isDark ? "bg-[hsl(var(--accent))]/20" : "bg-[hsl(var(--accent))]/10"
+        }`}
+      >
+        <CheckCircle className="mx-auto mb-3 h-12 w-12 text-[hsl(var(--accent))]" />
+        <h3
+          className={`mb-2 text-xl font-bold ${
+            isDark ? "text-primary-foreground" : "text-foreground"
+          }`}
+        >
+          Talebiniz Alindi!
         </h3>
-        <p className={`text-sm ${isDark ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
-          En kısa sürede sizinle iletişime geçeceğiz.
+        <p
+          className={`text-sm ${
+            isDark ? "text-primary-foreground/80" : "text-muted-foreground"
+          }`}
+        >
+          En kisa surede sizinle iletisime gececegiz.
         </p>
       </div>
     )
@@ -36,7 +49,7 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
       <input
         type="text"
-        placeholder="Adınız Soyadınız"
+        placeholder="Adiniz Soyadiniz"
         required
         value={formData.name}
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -48,7 +61,7 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
       />
       <input
         type="tel"
-        placeholder="Telefon Numaranız"
+        placeholder="Telefon Numaraniz"
         required
         value={formData.phone}
         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -59,7 +72,7 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
         }`}
       />
       <textarea
-        placeholder="Mesajınız (Opsiyonel)"
+        placeholder="Mesajiniz (Opsiyonel)"
         rows={2}
         value={formData.message}
         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -87,10 +100,16 @@ export function ContactForm() {
     <section id="iletisim" className="bg-primary py-14 lg:py-24">
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
-          {/* Video placeholder */}
-          <div className="relative overflow-hidden rounded-2xl bg-foreground/10">
-            <div className="aspect-video w-full">
-              <div className="flex h-full items-center justify-center bg-[hsl(210,40%,12%)]/30">
+          {/* Video / visual side */}
+          <div className="relative overflow-hidden rounded-2xl">
+            <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-foreground/10">
+              <Image
+                src="/images/cta-child-teeth.jpg"
+                alt="Mutlu cocuk gulmesi"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 flex items-center justify-center bg-[hsl(210,40%,12%)]/30">
                 <button
                   className="flex h-16 w-16 items-center justify-center rounded-full bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] shadow-2xl transition-transform hover:scale-110 sm:h-20 sm:w-20"
                   aria-label="Videoyu oynat"
@@ -99,18 +118,18 @@ export function ContactForm() {
                 </button>
               </div>
             </div>
-            <p className="bg-[hsl(210,40%,12%)]/60 px-4 py-3 text-center text-sm font-medium text-[hsl(0,0%,100%)]">
-              Pedodonti Hekimimiz Anlatıyor
+            <p className="mt-3 text-center text-sm font-medium text-primary-foreground/80">
+              Pedodonti Hekimimiz Anlatiyor
             </p>
           </div>
 
           {/* Form */}
           <div>
             <h2 className="mb-2 font-serif text-2xl font-extrabold text-primary-foreground sm:text-3xl lg:text-4xl">
-              Çocuğunuz İçin Sağlıklı Bir Gülüşe İlk Adım!
+              Cocugunuz Icin Saglikli Bir Guluse Ilk Adim!
             </h2>
             <p className="mb-6 text-base text-primary-foreground/80 sm:mb-8 sm:text-lg">
-              Pedodonti Uzmanlarımızdan Detaylı Bilgi Alın!
+              Pedodonti Uzmanlarimizdan Detayli Bilgi Alin!
             </p>
             <MiniForm variant="dark" />
           </div>

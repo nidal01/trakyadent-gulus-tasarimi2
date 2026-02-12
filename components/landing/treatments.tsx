@@ -11,113 +11,120 @@ import {
   Stethoscope,
   ClipboardCheck,
   CheckCircle2,
-  ChevronDown,
 } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
 const treatments = [
   {
     icon: Shield,
-    title: "Koruyucu Diş Tedavileri",
-    shortDesc: "Fissür örtücü ve flor uygulamaları ile çocuğunuzun dişlerini çürüğe karşı koruyoruz.",
+    label: "Koruyucu",
+    title: "Koruyucu Dis Tedavileri",
+    shortDesc: "Fissur ortucu ve flor uygulamalari ile cocugunuzun dislerini curuge karsi koruyoruz.",
     longDesc:
-      "Koruyucu diş hekimliği, çocuğunuzun dişlerini çürük oluşmadan koruyan en etkili yöntemdir. Trakyadent Pedodonti Merkezi olarak, çocuklara özel koruyucu tedaviler ile sağlıklı gülüşlerin temelini atıyoruz.",
+      "Koruyucu dis hekimligi, cocugunuzun dislerini curuk olusmadan koruyan en etkili yontemdir. Trakyadent Pedodonti Merkezi olarak, cocuklara ozel koruyucu tedaviler ile saglikli guluslerin temelini atiyoruz.",
     benefits: [
-      "Fissür örtücü uygulaması ile çürük riskini minimuma indirir",
-      "Profesyonel flor uygulaması ile diş minesini güçlendirir",
-      "Düzenli kontroller ile erken teşhis sağlar",
-      "Ağrısız ve hızlı bir işlem sürecidir",
+      "Fissur ortucu uygulamasi ile curuk riskini minimuma indirir",
+      "Profesyonel flor uygulamasi ile dis minesini guclendirir",
+      "Duzenli kontroller ile erken teshis saglar",
+      "Agrisiz ve hizli bir islem surecidir",
     ],
   },
   {
     icon: Sparkles,
-    title: "Çocuk Dolgu Tedavisi",
-    shortDesc: "Çocuklara özel estetik dolgu uygulamaları ile sağlıklı ve güzel gülüşler.",
+    label: "Dolgu",
+    title: "Cocuk Dolgu Tedavisi",
+    shortDesc: "Cocuklara ozel estetik dolgu uygulamalari ile saglikli ve guzel gulusler.",
     longDesc:
-      "Çocuklarda oluşan diş çürüklerinin zamanında tedavi edilmesi, dişin yapısının korunması ve sağlıklı bir ağız ortamının sürdürülmesi açısından büyük önem taşır. Modern dolgu malzemeleri ile estetik ve dayanıklı çözümler sunuyoruz.",
+      "Cocuklarda olusan dis curuklerinin zamaninda tedavi edilmesi, disin yapisinin korunmasi ve saglikli bir agiz ortaminin surdurul-mesi acisindan buyuk onem tasir. Modern dolgu malzemeleri ile estetik ve dayanikli cozumler sunuyoruz.",
     benefits: [
-      "Diş renginde estetik dolgu malzemeleri kullanılır",
-      "Çocuğun rahat etmesi için konforlu tedavi ortamı",
-      "Uzun ömürlü ve dayanıklı dolgu çözümleri",
-      "Tedavi sonrası diş bakımı eğitimi verilir",
+      "Dis renginde estetik dolgu malzemeleri kullanilir",
+      "Cocugun rahat etmesi icin konforlu tedavi ortami",
+      "Uzun omurlu ve dayanikli dolgu cozumleri",
+      "Tedavi sonrasi dis bakimi egitimi verilir",
     ],
   },
   {
     icon: Heart,
-    title: "Süt Dişi Kanal Tedavisi",
-    shortDesc: "Süt dişlerinde oluşan ileri çürüklerin tedavisi ile dişin korunmasını sağlıyoruz.",
+    label: "Kanal",
+    title: "Sut Disi Kanal Tedavisi",
+    shortDesc: "Sut dislerinde olusan ileri curuklerin tedavisi ile disin korunmasini sagliyoruz.",
     longDesc:
-      "Süt dişlerinde ilerlemiş çürükler nedeniyle sinir dokusuna kadar ulaşan enfeksiyonlar, uygun kanal tedavisi ile kontrol altına alınır. Bu tedavi, dişin erken kaybını önleyerek kalıcı dişlerin doğru konumlanmasını destekler.",
+      "Sut dislerinde ilerlesmis curukler nedeniyle sinir dokusuna kadar ulasan enfeksiyonlar, uygun kanal tedavisi ile kontrol altina alinir. Bu tedavi, disin erken kaybini onleyerek kalici dislerin dogru konumlanmasini destekler.",
     benefits: [
-      "Dişin erken kaybını önler",
-      "Kalıcı dişlerin doğru konumlanmasını destekler",
-      "Çocuğun çiğneme ve konuşma fonksiyonunu korur",
-      "Dijital anestezi ile ağrısız tedavi deneyimi",
+      "Disin erken kaybini onler",
+      "Kalici dislerin dogru konumlanmasini destekler",
+      "Cocugun cigneme ve konusma fonksiyonunu korur",
+      "Dijital anestezi ile agrisiz tedavi deneyimi",
     ],
   },
   {
     icon: Syringe,
+    label: "Dijital Anestezi",
     title: "Dijital Anestezi",
-    shortDesc: "Ağrısız ve korkusuz tedavi için modern dijital anestezi teknolojisi.",
+    shortDesc: "Agrisiz ve korkusuz tedavi icin modern dijital anestezi teknolojisi.",
     longDesc:
-      "Dijital anestezi, ilacın kontrollü ve yavaş şekilde uygulanmasını sağlayan modern bir uyuşturma yöntemidir. Bu sayede ağrı ve basınç hissi minimuma iner, işlem daha konforlu gerçekleşir. Özellikle çocuk hastalarda iğne korkusunu azaltarak tedavilerin daha rahat tamamlanmasına yardımcı olur.",
+      "Dijital anestezi, ilacin kontrollu ve yavas sekilde uygulanmasini saglayan modern bir uyusturma yontemidir. Bu sayede agri ve basinc hissi minimuma iner, islem daha konforlu gerceklesir.",
     benefits: [
-      "Kontrollü ve yavaş ilaç uygulaması",
-      "Ağrı ve basınç hissi minimuma iner",
-      "İğne korkusunu azaltır",
-      "Çocuklar için çok daha konforlu bir deneyim",
+      "Kontrollu ve yavas ilac uygulamasi",
+      "Agri ve basinc hissi minimuma iner",
+      "Igne korkusunu azaltir",
+      "Cocuklar icin cok daha konforlu bir deneyim",
     ],
   },
   {
     icon: SmilePlus,
-    title: "Yer Tutucu Uygulamaları",
-    shortDesc: "Erken kaybedilen süt dişleri için kalıcı dişlerin doğru konumlanmasını sağlayan yer tutucular.",
+    label: "Yer Tutucu",
+    title: "Yer Tutucu Uygulamalari",
+    shortDesc: "Erken kaybedilen sut disleri icin kalici dislerin dogru konumlanmasini saglayan yer tutucular.",
     longDesc:
-      "Erken kaybedilen süt dişlerinin bıraktığı boşluğa komşu dişlerin kaymasını önlemek ve kalıcı dişlerin doğru konumda sürmesini sağlamak amacıyla yer tutucu uygulanır. Bu basit ama etkili uygulama, ileride oluşabilecek ortodontik sorunları büyük ölçüde önler.",
+      "Erken kaybedilen sut dislerinin biraktigi bosluga komsu dislerin kaymasini onlemek ve kalici dislerin dogru konumda surmesini saglamak amaciyla yer tutucu uygulanir.",
     benefits: [
-      "Kalıcı dişlerin doğru konumda sürmesini sağlar",
-      "İlerideki ortodontik sorunları önler",
-      "Basit ve ağrısız bir uygulamadır",
-      "Çocuğun çene gelişimini destekler",
+      "Kalici dislerin dogru konumda surmesini saglar",
+      "Ilerideki ortodontik sorunlari onler",
+      "Basit ve agrisiz bir uygulamadir",
+      "Cocugun cene gelisimini destekler",
     ],
   },
   {
     icon: Baby,
-    title: "Bebek Diş Bakımı",
-    shortDesc: "0-3 yaş arası bebeklerin diş sağlığı takibi ve ailelere bilinçlendirme eğitimi.",
+    label: "Bebek Bakimi",
+    title: "Bebek Dis Bakimi",
+    shortDesc: "0-3 yas arasi bebeklerin dis sagligi takibi ve ailelere bilinclen-dirme egitimi.",
     longDesc:
-      "Bebeklerin ilk dişleri çıkmaya başladığı andan itibaren ağız bakımı önem kazanır. Trakyadent Pedodonti Merkezi olarak, 0-3 yaş arası bebeklerin diş sağlığı takibini yapıyor, ailelere doğru diş fırçalama teknikleri ve beslenme alışkanlıkları konusunda rehberlik ediyoruz.",
+      "Bebeklerin ilk disleri cikmaya basladigi andan itibaren agiz bakimi onem kazanir. 0-3 yas arasi bebeklerin dis sagligi takibini yapiyor, ailelere rehberlik ediyoruz.",
     benefits: [
-      "İlk dişten itibaren düzenli takip",
-      "Ailelere bilinçlendirme eğitimi verilir",
-      "Doğru beslenme alışkanlıkları konusunda danışmanlık",
-      "Erken dönemde çürük riskini azaltır",
+      "Ilk disten itibaren duzenli takip",
+      "Ailelere bilinclendirme egitimi verilir",
+      "Dogru beslenme aliskanliklari konusunda danismanlik",
+      "Erken donemde curuk riskini azaltir",
     ],
   },
   {
     icon: Stethoscope,
-    title: "Diş Travması Tedavisi",
-    shortDesc: "Çocuklarda sık görülen diş kırıklarının acil ve etkili tedavisi.",
+    label: "Travma",
+    title: "Dis Travmasi Tedavisi",
+    shortDesc: "Cocuklarda sik gorulen dis kiriklari-nin acil ve etkili tedavisi.",
     longDesc:
-      "Çocukluk döneminde düşme, çarpma veya spor yaralanmaları sonucu diş travmaları sıkça yaşanabilir. Travma sonrası hızlı müdahale, dişin kurtarılması veya onarımı için kritik öneme sahiptir. Uzman ekibimiz, acil diş travmalarında hızlı ve etkili tedavi sunar.",
+      "Cocukluk doneminde dusme, carpma veya spor yaralanmalari sonucu dis travmalari sikca yasanabilir. Travma sonrasi hizli mudahale, disin kurtarilmasi icin kritik oneme sahiptir.",
     benefits: [
-      "Acil müdahale ile dişin kurtarılma şansı artar",
-      "Kırık ve çatlak dişlerin estetik onarımı",
-      "Çocuğa özel travma sonrası takip protokolü",
-      "Gerektiğinde koruyucu aparey önerisi",
+      "Acil mudahale ile disin kurtarilma sansi artar",
+      "Kirik ve catlak dislerin estetik onarimi",
+      "Cocuga ozel travma sonrasi takip protokolu",
+      "Gerektiginde koruyucu aparey onerisi",
     ],
   },
   {
     icon: ClipboardCheck,
-    title: "Periyodik Diş Kontrolü",
-    shortDesc: "Düzenli kontrollerle çocuğunuzun ağız sağlığını erken dönemde koruma altına alıyoruz.",
+    label: "Kontrol",
+    title: "Periyodik Dis Kontrolu",
+    shortDesc: "Duzenli kontrollerle cocugunuzun agiz sagligini erken donemde koruma altina aliyoruz.",
     longDesc:
-      "Düzenli diş kontrolleri, çocuğunuzun ağız ve diş sağlığının korunmasında en temel adımdır. 6 ayda bir yapılan kontroller sayesinde olası sorunlar erken tespit edilir, koruyucu tedaviler zamanında uygulanır ve çocuğunuz sağlıklı bir gülüşle büyür.",
+      "Duzenli dis kontrolleri, cocugunuzun agiz ve dis sagliginin korunmasinda en temel adimdir. 6 ayda bir yapilan kontroller sayesinde olasi sorunlar erken tespit edilir.",
     benefits: [
-      "6 ayda bir düzenli kontrol önerisi",
-      "Erken teşhis ile büyük sorunları önler",
-      "Çocuğa diş bakımı alışkanlığı kazandırır",
-      "Tedavi ihtiyacını ve maliyetini azaltır",
+      "6 ayda bir duzenli kontrol onerisi",
+      "Erken teshis ile buyuk sorunlari onler",
+      "Cocuga dis bakimi aliskanligi kazandirir",
+      "Tedavi ihtiyacini ve maliyetini azaltir",
     ],
   },
 ]
@@ -125,8 +132,8 @@ const treatments = [
 export function Treatments() {
   const [activeTab, setActiveTab] = useState(0)
   const [visible, setVisible] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
+  const tabsScrollRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -138,6 +145,15 @@ export function Treatments() {
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [])
+
+  // Auto-scroll active tab into view on mobile
+  useEffect(() => {
+    if (!tabsScrollRef.current) return
+    const activeEl = tabsScrollRef.current.children[activeTab] as HTMLElement
+    if (activeEl) {
+      activeEl.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" })
+    }
+  }, [activeTab])
 
   const activeTreatment = treatments[activeTab]
 
@@ -153,11 +169,11 @@ export function Treatments() {
             Tedavilerimiz
           </span>
           <h2 className="mb-4 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
-            Çocuğunuz İçin En İyi Tedavi Seçenekleri
+            Cocugunuz Icin En Iyi Tedavi Secenekleri
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground lg:text-lg">
-            Uzman pedodonti ekibimiz, modern tekniklerle çocuklara özel konforlu
-            tedavi süreci sunar.
+            Uzman pedodonti ekibimiz, modern tekniklerle cocuklara ozel konforlu
+            tedavi sureci sunar.
           </p>
         </div>
 
@@ -167,50 +183,28 @@ export function Treatments() {
           }`}
           style={{ transitionDelay: "200ms" }}
         >
-          {/* Mobile: Dropdown selector */}
-          <div className="mb-4 lg:hidden">
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="flex w-full items-center justify-between rounded-xl border border-border bg-card px-4 py-3.5 text-left shadow-sm"
+          {/* Mobile: Horizontal scrollable pill tabs */}
+          <div className="mb-5 lg:hidden">
+            <div
+              ref={tabsScrollRef}
+              className="flex gap-2 overflow-x-auto pb-2"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                  <activeTreatment.icon className="h-5 w-5 text-primary" />
-                </div>
-                <span className="font-semibold text-foreground">{activeTreatment.title}</span>
-              </div>
-              <ChevronDown
-                className={`h-5 w-5 flex-shrink-0 text-muted-foreground transition-transform duration-200 ${
-                  mobileOpen ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-
-            {mobileOpen && (
-              <div className="mt-2 overflow-hidden rounded-xl border border-border bg-card shadow-lg">
-                {treatments.map((treatment, index) => (
-                  <button
-                    key={index}
-                    onClick={() => {
-                      setActiveTab(index)
-                      setMobileOpen(false)
-                    }}
-                    className={`flex w-full items-center gap-3 px-4 py-3 text-left transition-colors ${
-                      activeTab === index
-                        ? "bg-primary/10 text-primary"
-                        : "text-foreground hover:bg-muted"
-                    } ${index > 0 ? "border-t border-border" : ""}`}
-                  >
-                    <treatment.icon
-                      className={`h-5 w-5 flex-shrink-0 ${
-                        activeTab === index ? "text-primary" : "text-muted-foreground"
-                      }`}
-                    />
-                    <span className="text-sm font-semibold">{treatment.title}</span>
-                  </button>
-                ))}
-              </div>
-            )}
+              {treatments.map((treatment, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveTab(index)}
+                  className={`flex flex-shrink-0 items-center gap-1.5 rounded-full px-4 py-2.5 text-xs font-bold transition-all ${
+                    activeTab === index
+                      ? "bg-primary text-primary-foreground shadow-md"
+                      : "border border-border bg-card text-foreground"
+                  }`}
+                >
+                  <treatment.icon className="h-3.5 w-3.5" />
+                  {treatment.label}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Desktop: Side tabs + Content */}
@@ -224,7 +218,7 @@ export function Treatments() {
                   className={`flex items-center gap-3 rounded-xl px-4 py-3 text-left transition-all ${
                     activeTab === index
                       ? "bg-primary text-primary-foreground shadow-lg"
-                      : "bg-card text-foreground hover:bg-muted border border-border"
+                      : "border border-border bg-card text-foreground hover:bg-muted"
                   }`}
                 >
                   <treatment.icon
@@ -260,13 +254,15 @@ export function Treatments() {
 
                 <div className="mb-6 rounded-xl bg-muted/50 p-4 sm:mb-8 sm:p-6">
                   <h4 className="mb-3 font-serif text-base font-bold text-foreground sm:mb-4 sm:text-lg">
-                    Tedavinin Avantajları
+                    Tedavinin Avantajlari
                   </h4>
                   <ul className="flex flex-col gap-2.5 sm:gap-3">
                     {activeTreatment.benefits.map((benefit, i) => (
                       <li key={i} className="flex items-start gap-2.5 sm:gap-3">
                         <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-[hsl(var(--accent))] sm:h-5 sm:w-5" />
-                        <span className="text-sm text-muted-foreground sm:text-base">{benefit}</span>
+                        <span className="text-sm text-muted-foreground sm:text-base">
+                          {benefit}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -280,7 +276,7 @@ export function Treatments() {
                     className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-5 py-3 text-sm font-bold text-[hsl(var(--accent-foreground))] shadow-md transition-all hover:scale-[1.02] hover:shadow-lg sm:px-6 sm:py-3.5"
                   >
                     <WhatsAppIcon className="h-5 w-5" />
-                    Bu Tedavi Hakkında Bilgi Al
+                    Bu Tedavi Hakkinda Bilgi Al
                   </a>
                   <a
                     href="tel:4442289"
