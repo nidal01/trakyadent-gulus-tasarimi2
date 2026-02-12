@@ -24,18 +24,18 @@ export function LandingPage() {
         <ContactForm />
         <Treatments />
         <InlineCTA
-          title="Cocugunuzun Disleri Hakkinda Bilgi Alin!"
-          subtitle="Uzman pedodonti ekibimiz sizi bilgilendirmek icin hazir."
+          title="Çocuğunuzun Dişleri Hakkında Bilgi Alın!"
+          subtitle="Uzman pedodonti ekibimiz sizi bilgilendirmek için hazır."
           image="/images/cta-child-teeth.jpg"
-          imageAlt="Mutlu cocuk gulmesi"
+          imageAlt="Mutlu çocuk gülüşü"
         />
         <Clinics />
         <WhyTrakyadent />
         <InlineCTA
-          title="Ucretsiz Kontrol Randevusu!"
-          subtitle="36 yillik deneyimimizle cocugunuzun dis sagligini kontrol edelim."
+          title="Ücretsiz Kontrol Randevusu!"
+          subtitle="36 yıllık deneyimimizle çocuğunuzun diş sağlığını kontrol edelim."
           image="/images/clinic-interior.jpg"
-          imageAlt="Trakyadent klinik ic mekan"
+          imageAlt="Trakyadent klinik iç mekan"
           reversed
         />
         <DoctorTeam />

@@ -32,14 +32,14 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
             isDark ? "text-primary-foreground" : "text-foreground"
           }`}
         >
-          Talebiniz Alindi!
+          Talebiniz Alındı!
         </h3>
         <p
           className={`text-sm ${
             isDark ? "text-primary-foreground/80" : "text-muted-foreground"
           }`}
         >
-          En kisa surede sizinle iletisime gececegiz.
+          En kısa sürede sizinle iletişime geçeceğiz.
         </p>
       </div>
     )
@@ -49,7 +49,7 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
       <input
         type="text"
-        placeholder="Adiniz Soyadiniz"
+        placeholder="Adınız Soyadınız"
         required
         value={formData.name}
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -61,7 +61,7 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
       />
       <input
         type="tel"
-        placeholder="Telefon Numaraniz"
+        placeholder="Telefon Numaranız"
         required
         value={formData.phone}
         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -72,7 +72,7 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
         }`}
       />
       <textarea
-        placeholder="Mesajiniz (Opsiyonel)"
+        placeholder="Mesajınız (Opsiyonel)"
         rows={2}
         value={formData.message}
         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -105,7 +105,7 @@ export function ContactForm() {
             <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-foreground/10">
               <Image
                 src="/images/cta-child-teeth.jpg"
-                alt="Mutlu cocuk gulmesi"
+                alt="Mutlu çocuk gülümsemesi"
                 fill
                 className="object-cover"
               />
@@ -119,17 +119,17 @@ export function ContactForm() {
               </div>
             </div>
             <p className="mt-3 text-center text-sm font-medium text-primary-foreground/80">
-              Pedodonti Hekimimiz Anlatiyor
+              Pedodonti Hekimimiz Anlatıyor
             </p>
           </div>
 
           {/* Form */}
           <div>
             <h2 className="mb-2 font-serif text-2xl font-extrabold text-primary-foreground sm:text-3xl lg:text-4xl">
-              Cocugunuz Icin Saglikli Bir Guluse Ilk Adim!
+              Çocuğunuz İçin Sağlıklı Bir Gülüşe İlk Adım!
             </h2>
             <p className="mb-6 text-base text-primary-foreground/80 sm:mb-8 sm:text-lg">
-              Pedodonti Uzmanlarimizdan Detayli Bilgi Alin!
+              Pedodonti Uzmanlarımızdan Detaylı Bilgi Alın!
             </p>
             <MiniForm variant="dark" />
           </div>

@@ -6,36 +6,36 @@ import { ChevronLeft, ChevronRight, Play } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
 const doctors = [
-  { name: "Dt. Subaykan PANDAR", title: "Dis Hekimi - Kurucu YK Uyesi", image: "/images/doctor-1.jpg" },
-  { name: "Dt. Emre PANDAR", title: "Cerkezkoy Klinik Bashekimi - YK Baskani", image: "/images/doctor-2.jpg" },
-  { name: "Dt. Demet PANDAR", title: "Dis Hekimi - YK Uyesi", image: "/images/doctor-3.jpg" },
-  { name: "Dt. Hikmet AKGUL", title: "Luleburgaz Klinik Bashekimi", image: "/images/doctor-4.jpg" },
-  { name: "Dr. Dt. Ezgi AKCE", title: "Maslak Klinik Bashekimi - Periodontoloji", image: "/images/doctor-1.jpg" },
-  { name: "Dt. Buse KASIKCI", title: "Corlu Klinik Bashekimi", image: "/images/doctor-3.jpg" },
-  { name: "Dr. Dt. Fuad NAJAFI", title: "Agiz, Dis ve Cene Cerrahisi", image: "/images/doctor-2.jpg" },
-  { name: "Dr. Dt. Burak AKCE", title: "Ortodonti", image: "/images/doctor-4.jpg" },
-  { name: "Uzm. Dt. Bahar AKSAN YENILMEZ", title: "Pedodonti Uzmani", image: "/images/doctor-3.jpg" },
-  { name: "Uzm. Dt. Aysegul ATILLA", title: "Protez Uzmani", image: "/images/doctor-1.jpg" },
-  { name: "Uzm. Dt. Ufuk KARACA", title: "Periodontoloji Uzmani", image: "/images/doctor-2.jpg" },
-  { name: "Uzm. Dt. Gamze KILIC", title: "Pedodonti Uzmani", image: "/images/doctor-3.jpg" },
-  { name: "Uzm. Dt. Mert GOKSU", title: "Endodonti Uzmani", image: "/images/doctor-4.jpg" },
-  { name: "Uzm. Dr. Yasin ESEN", title: "Anestezi ve Reanimasyon Uzmani", image: "/images/doctor-2.jpg" },
+  { name: "Dt. Subaykan PANDAR", title: "Diş Hekimi - Kurucu YK Üyesi", image: "/images/doctor-1.jpg" },
+  { name: "Dt. Emre PANDAR", title: "Çerkezköy Klinik Başhekimi - YK Başkanı", image: "/images/doctor-2.jpg" },
+  { name: "Dt. Demet PANDAR", title: "Diş Hekimi - YK Üyesi", image: "/images/doctor-3.jpg" },
+  { name: "Dt. Hikmet AKGÜL", title: "Lüleburgaz Klinik Başhekimi", image: "/images/doctor-4.jpg" },
+  { name: "Dr. Dt. Ezgi AKÇE", title: "Maslak Klinik Başhekimi - Periodontoloji", image: "/images/doctor-1.jpg" },
+  { name: "Dt. Buse KAŞIKÇI", title: "Çorlu Klinik Başhekimi", image: "/images/doctor-3.jpg" },
+  { name: "Dr. Dt. Fuad NAJAFİ", title: "Ağız, Diş ve Çene Cerrahisi", image: "/images/doctor-2.jpg" },
+  { name: "Dr. Dt. Burak AKÇE", title: "Ortodonti", image: "/images/doctor-4.jpg" },
+  { name: "Uzm. Dt. Bahar AKSAN YENİLMEZ", title: "Pedodonti Uzmanı", image: "/images/doctor-3.jpg" },
+  { name: "Uzm. Dt. Ayşegül ATİLLA", title: "Protez Uzmanı", image: "/images/doctor-1.jpg" },
+  { name: "Uzm. Dt. Ufuk KARACA", title: "Periodontoloji Uzmanı", image: "/images/doctor-2.jpg" },
+  { name: "Uzm. Dt. Gamze KILIÇ", title: "Pedodonti Uzmanı", image: "/images/doctor-3.jpg" },
+  { name: "Uzm. Dt. Mert GÖKSU", title: "Endodonti Uzmanı", image: "/images/doctor-4.jpg" },
+  { name: "Uzm. Dr. Yasin ESEN", title: "Anestezi ve Reanimasyon Uzmanı", image: "/images/doctor-2.jpg" },
   { name: "Dr. Dt. Yasemin CANPOLAT", title: "Ortodonti", image: "/images/doctor-1.jpg" },
-  { name: "Dr. Dt. Omer Faruk YENILMEZ", title: "Endodonti", image: "/images/doctor-4.jpg" },
-  { name: "Dt. Nehir DENIZ", title: "Dis Hekimi", image: "/images/doctor-3.jpg" },
-  { name: "Dt. Hilal SAYIN VAROL", title: "Dis Hekimi", image: "/images/doctor-1.jpg" },
-  { name: "Dt. Huseyin TIRPAN", title: "Dis Hekimi", image: "/images/doctor-2.jpg" },
-  { name: "Dt. Maruf OZTURK", title: "Dis Hekimi", image: "/images/doctor-4.jpg" },
-  { name: "Dt. Pinar ERSAN", title: "Dis Hekimi", image: "/images/doctor-3.jpg" },
-  { name: "Dt. Ulas Unal AKTAS", title: "Dis Hekimi", image: "/images/doctor-2.jpg" },
-  { name: "Dt. Buse BILGIN", title: "Dis Hekimi", image: "/images/doctor-1.jpg" },
-  { name: "Dt. Merve Gokkus MUMCU", title: "Dis Hekimi", image: "/images/doctor-3.jpg" },
-  { name: "Dt. Mert Tufan BILGE", title: "Dis Hekimi", image: "/images/doctor-4.jpg" },
-  { name: "Dt. Sura BAS", title: "Dis Hekimi", image: "/images/doctor-1.jpg" },
-  { name: "Dt. Ozan TURKMEN", title: "Dis Hekimi", image: "/images/doctor-2.jpg" },
-  { name: "Dt. Elif Betul UGRAC", title: "Dis Hekimi", image: "/images/doctor-3.jpg" },
-  { name: "Dt. Fatih Serdar UGRAC", title: "Dis Hekimi", image: "/images/doctor-4.jpg" },
-  { name: "Dt. Seymanur BILGIC", title: "Dis Hekimi", image: "/images/doctor-1.jpg" },
+  { name: "Dr. Dt. Ömer Faruk YENİLMEZ", title: "Endodonti", image: "/images/doctor-4.jpg" },
+  { name: "Dt. Nehir DENİZ", title: "Diş Hekimi", image: "/images/doctor-3.jpg" },
+  { name: "Dt. Hilal SAYIN VAROL", title: "Diş Hekimi", image: "/images/doctor-1.jpg" },
+  { name: "Dt. Hüseyin TIRPAN", title: "Diş Hekimi", image: "/images/doctor-2.jpg" },
+  { name: "Dt. Maruf ÖZTÜRK", title: "Diş Hekimi", image: "/images/doctor-4.jpg" },
+  { name: "Dt. Pınar ERSAN", title: "Diş Hekimi", image: "/images/doctor-3.jpg" },
+  { name: "Dt. Ulaş Ünal AKTAŞ", title: "Diş Hekimi", image: "/images/doctor-2.jpg" },
+  { name: "Dt. Buse BİLGİN", title: "Diş Hekimi", image: "/images/doctor-1.jpg" },
+  { name: "Dt. Merve Gökküş MUMCU", title: "Diş Hekimi", image: "/images/doctor-3.jpg" },
+  { name: "Dt. Mert Tufan BİLGE", title: "Diş Hekimi", image: "/images/doctor-4.jpg" },
+  { name: "Dt. Süra BAŞ", title: "Diş Hekimi", image: "/images/doctor-1.jpg" },
+  { name: "Dt. Ozan TÜRKMEN", title: "Diş Hekimi", image: "/images/doctor-2.jpg" },
+  { name: "Dt. Elif Betül UĞRAÇ", title: "Diş Hekimi", image: "/images/doctor-3.jpg" },
+  { name: "Dt. Fatih Serdar UĞRAÇ", title: "Diş Hekimi", image: "/images/doctor-4.jpg" },
+  { name: "Dt. Şeymanur BİLGİÇ", title: "Diş Hekimi", image: "/images/doctor-1.jpg" },
 ]
 
 export function DoctorTeam() {
@@ -79,7 +79,7 @@ export function DoctorTeam() {
             30 Uzman Hekim Kadromuz
           </h2>
           <p className="text-base text-muted-foreground lg:text-lg">
-            Minik Gulusler Icin Buyuk Uzmanlik! Tum hekimlerimiz ile tanisin.
+            Minik Gülüşler İçin Büyük Uzmanlık! Tüm hekimlerimiz ile tanışın.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ export function DoctorTeam() {
             <button
               onClick={() => scroll("left")}
               className="absolute -left-2 top-1/3 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-lg transition-all hover:bg-primary hover:text-primary-foreground lg:-left-4 lg:flex"
-              aria-label="Onceki hekimler"
+              aria-label="Önceki hekimler"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -146,7 +146,7 @@ export function DoctorTeam() {
           {/* Scroll indicator for mobile */}
           <div className="mt-3 flex items-center justify-center gap-1.5 text-xs text-muted-foreground lg:hidden">
             <ChevronLeft className="h-3.5 w-3.5" />
-            <span>Kaydirarak tum hekimleri gorun</span>
+            <span>Kaydırarak tüm hekimleri görün</span>
             <ChevronRight className="h-3.5 w-3.5" />
           </div>
         </div>
@@ -155,19 +155,19 @@ export function DoctorTeam() {
         <div className="mt-16 lg:mt-20">
           <div className="mx-auto mb-10 max-w-2xl text-center lg:mb-12">
             <h2 className="mb-4 font-serif text-2xl font-extrabold text-foreground sm:text-3xl lg:text-4xl">
-              Hekimlerimiz Anlatiyor!
+              Hekimlerimiz Anlatıyor!
             </h2>
             <p className="text-base text-muted-foreground lg:text-lg">
-              Uzman hekimlerimizin bilgilendirici videolariyla tedavi surecleri
-              hakkinda detayli bilgi alin.
+              Uzman hekimlerimizin bilgilendirici videolarıyla tedavi süreçleri
+              hakkında detaylı bilgi alın.
             </p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {[
-              "Cocuklarda Dis Bakimi",
+              "Çocuklarda Diş Bakımı",
               "Dijital Anestezi Nedir?",
-              "Sut Disleri Neden Onemli?",
+              "Süt Dişleri Neden Önemli?",
             ].map((title, index) => (
               <div
                 key={index}

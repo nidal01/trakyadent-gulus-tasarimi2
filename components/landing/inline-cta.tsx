@@ -16,7 +16,7 @@ export function InlineCTA({
   title,
   subtitle,
   image = "/images/cta-child-teeth.jpg",
-  imageAlt = "Cocuk dis sagligi",
+  imageAlt = "Çocuk diş sağlığı",
   reversed = false,
 }: InlineCTAProps) {
   return (

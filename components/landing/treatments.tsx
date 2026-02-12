@@ -18,113 +18,113 @@ const treatments = [
   {
     icon: Shield,
     label: "Koruyucu",
-    title: "Koruyucu Dis Tedavileri",
-    shortDesc: "Fissur ortucu ve flor uygulamalari ile cocugunuzun dislerini curuge karsi koruyoruz.",
+    title: "Koruyucu Diş Tedavileri",
+    shortDesc: "Fissür örtücü ve flor uygulamaları ile çocuğunuzun dişlerini çürüğe karşı koruyoruz.",
     longDesc:
-      "Koruyucu dis hekimligi, cocugunuzun dislerini curuk olusmadan koruyan en etkili yontemdir. Trakyadent Pedodonti Merkezi olarak, cocuklara ozel koruyucu tedaviler ile saglikli guluslerin temelini atiyoruz.",
+      "Koruyucu diş hekimliği, çocuğunuzun dişlerini çürük oluşmadan koruyan en etkili yöntemdir. Trakyadent Pedodonti Merkezi olarak, çocuklara özel koruyucu tedaviler ile sağlıklı gülüşlerin temelini atıyoruz.",
     benefits: [
-      "Fissur ortucu uygulamasi ile curuk riskini minimuma indirir",
-      "Profesyonel flor uygulamasi ile dis minesini guclendirir",
-      "Duzenli kontroller ile erken teshis saglar",
-      "Agrisiz ve hizli bir islem surecidir",
+      "Fissür örtücü uygulaması ile çürük riskini minimuma indirir",
+      "Profesyonel flor uygulaması ile diş minesini güçlendirir",
+      "Düzenli kontroller ile erken teşhis sağlar",
+      "Ağrısız ve hızlı bir işlem sürecidir",
     ],
   },
   {
     icon: Sparkles,
     label: "Dolgu",
-    title: "Cocuk Dolgu Tedavisi",
-    shortDesc: "Cocuklara ozel estetik dolgu uygulamalari ile saglikli ve guzel gulusler.",
+    title: "Çocuk Dolgu Tedavisi",
+    shortDesc: "Çocuklara özel estetik dolgu uygulamaları ile sağlıklı ve güzel gülüşler.",
     longDesc:
-      "Cocuklarda olusan dis curuklerinin zamaninda tedavi edilmesi, disin yapisinin korunmasi ve saglikli bir agiz ortaminin surdurul-mesi acisindan buyuk onem tasir. Modern dolgu malzemeleri ile estetik ve dayanikli cozumler sunuyoruz.",
+      "Çocuklarda oluşan diş çürüklerinin zamanında tedavi edilmesi, dişin yapısının korunması ve sağlıklı bir ağız ortamının sürdürülmesi açısından büyük önem taşır. Modern dolgu malzemeleri ile estetik ve dayanıklı çözümler sunuyoruz.",
     benefits: [
-      "Dis renginde estetik dolgu malzemeleri kullanilir",
-      "Cocugun rahat etmesi icin konforlu tedavi ortami",
-      "Uzun omurlu ve dayanikli dolgu cozumleri",
-      "Tedavi sonrasi dis bakimi egitimi verilir",
+      "Diş renginde estetik dolgu malzemeleri kullanılır",
+      "Çocuğun rahat etmesi için konforlu tedavi ortamı",
+      "Uzun ömürlü ve dayanıklı dolgu çözümleri",
+      "Tedavi sonrası diş bakımı eğitimi verilir",
     ],
   },
   {
     icon: Heart,
     label: "Kanal",
-    title: "Sut Disi Kanal Tedavisi",
-    shortDesc: "Sut dislerinde olusan ileri curuklerin tedavisi ile disin korunmasini sagliyoruz.",
+    title: "Süt Dişi Kanal Tedavisi",
+    shortDesc: "Süt dişlerinde oluşan ileri çürüklerin tedavisi ile dişin korunmasını sağlıyoruz.",
     longDesc:
-      "Sut dislerinde ilerlesmis curukler nedeniyle sinir dokusuna kadar ulasan enfeksiyonlar, uygun kanal tedavisi ile kontrol altina alinir. Bu tedavi, disin erken kaybini onleyerek kalici dislerin dogru konumlanmasini destekler.",
+      "Süt dişlerinde ilerlemiş çürükler nedeniyle sinir dokusuna kadar ulaşan enfeksiyonlar, uygun kanal tedavisi ile kontrol altına alınır. Bu tedavi, dişin erken kaybını önleyerek kalıcı dişlerin doğru konumlanmasını destekler.",
     benefits: [
-      "Disin erken kaybini onler",
-      "Kalici dislerin dogru konumlanmasini destekler",
-      "Cocugun cigneme ve konusma fonksiyonunu korur",
-      "Dijital anestezi ile agrisiz tedavi deneyimi",
+      "Dişin erken kaybını önler",
+      "Kalıcı dişlerin doğru konumlanmasını destekler",
+      "Çocuğun çiğneme ve konuşma fonksiyonunu korur",
+      "Dijital anestezi ile ağrısız tedavi deneyimi",
     ],
   },
   {
     icon: Syringe,
     label: "Dijital Anestezi",
     title: "Dijital Anestezi",
-    shortDesc: "Agrisiz ve korkusuz tedavi icin modern dijital anestezi teknolojisi.",
+    shortDesc: "Ağrısız ve korkusuz tedavi için modern dijital anestezi teknolojisi.",
     longDesc:
-      "Dijital anestezi, ilacin kontrollu ve yavas sekilde uygulanmasini saglayan modern bir uyusturma yontemidir. Bu sayede agri ve basinc hissi minimuma iner, islem daha konforlu gerceklesir.",
+      "Dijital anestezi, ilacın kontrollü ve yavaş şekilde uygulanmasını sağlayan modern bir uyuşturma yöntemidir. Bu sayede ağrı ve basınç hissi minimuma iner, işlem daha konforlu gerçekleşir.",
     benefits: [
-      "Kontrollu ve yavas ilac uygulamasi",
-      "Agri ve basinc hissi minimuma iner",
-      "Igne korkusunu azaltir",
-      "Cocuklar icin cok daha konforlu bir deneyim",
+      "Kontrollü ve yavaş ilaç uygulaması",
+      "Ağrı ve basınç hissi minimuma iner",
+      "İğne korkusunu azaltır",
+      "Çocuklar için çok daha konforlu bir deneyim",
     ],
   },
   {
     icon: SmilePlus,
     label: "Yer Tutucu",
-    title: "Yer Tutucu Uygulamalari",
-    shortDesc: "Erken kaybedilen sut disleri icin kalici dislerin dogru konumlanmasini saglayan yer tutucular.",
+    title: "Yer Tutucu Uygulamaları",
+    shortDesc: "Erken kaybedilen süt dişleri için kalıcı dişlerin doğru konumlanmasını sağlayan yer tutucular.",
     longDesc:
-      "Erken kaybedilen sut dislerinin biraktigi bosluga komsu dislerin kaymasini onlemek ve kalici dislerin dogru konumda surmesini saglamak amaciyla yer tutucu uygulanir.",
+      "Erken kaybedilen süt dişlerinin bıraktığı boşluğa komşu dişlerin kaymasını önlemek ve kalıcı dişlerin doğru konumda sürmesini sağlamak amacıyla yer tutucu uygulanır.",
     benefits: [
-      "Kalici dislerin dogru konumda surmesini saglar",
-      "Ilerideki ortodontik sorunlari onler",
-      "Basit ve agrisiz bir uygulamadir",
-      "Cocugun cene gelisimini destekler",
+      "Kalıcı dişlerin doğru konumda sürmesini sağlar",
+      "İlerideki ortodontik sorunları önler",
+      "Basit ve ağrısız bir uygulamadır",
+      "Çocuğun çene gelişimini destekler",
     ],
   },
   {
     icon: Baby,
-    label: "Bebek Bakimi",
-    title: "Bebek Dis Bakimi",
-    shortDesc: "0-3 yas arasi bebeklerin dis sagligi takibi ve ailelere bilinclen-dirme egitimi.",
+    label: "Bebek Bakımı",
+    title: "Bebek Diş Bakımı",
+    shortDesc: "0-3 yaş arası bebeklerin diş sağlığı takibi ve ailelere bilinçlendirme eğitimi.",
     longDesc:
-      "Bebeklerin ilk disleri cikmaya basladigi andan itibaren agiz bakimi onem kazanir. 0-3 yas arasi bebeklerin dis sagligi takibini yapiyor, ailelere rehberlik ediyoruz.",
+      "Bebeklerin ilk dişleri çıkmaya başladığı andan itibaren ağız bakımı önem kazanır. 0-3 yaş arası bebeklerin diş sağlığı takibini yapıyor, ailelere rehberlik ediyoruz.",
     benefits: [
-      "Ilk disten itibaren duzenli takip",
-      "Ailelere bilinclendirme egitimi verilir",
-      "Dogru beslenme aliskanliklari konusunda danismanlik",
-      "Erken donemde curuk riskini azaltir",
+      "İlk dişten itibaren düzenli takip",
+      "Ailelere bilinçlendirme eğitimi verilir",
+      "Doğru beslenme alışkanlıkları konusunda danışmanlık",
+      "Erken dönemde çürük riskini azaltır",
     ],
   },
   {
     icon: Stethoscope,
     label: "Travma",
-    title: "Dis Travmasi Tedavisi",
-    shortDesc: "Cocuklarda sik gorulen dis kiriklari-nin acil ve etkili tedavisi.",
+    title: "Diş Travması Tedavisi",
+    shortDesc: "Çocuklarda sık görülen diş kırıklarının acil ve etkili tedavisi.",
     longDesc:
-      "Cocukluk doneminde dusme, carpma veya spor yaralanmalari sonucu dis travmalari sikca yasanabilir. Travma sonrasi hizli mudahale, disin kurtarilmasi icin kritik oneme sahiptir.",
+      "Çocukluk döneminde düşme, çarpma veya spor yaralanmaları sonucu diş travmaları sıkça yaşanabilir. Travma sonrası hızlı müdahale, dişin kurtarılması için kritik öneme sahiptir.",
     benefits: [
-      "Acil mudahale ile disin kurtarilma sansi artar",
-      "Kirik ve catlak dislerin estetik onarimi",
-      "Cocuga ozel travma sonrasi takip protokolu",
-      "Gerektiginde koruyucu aparey onerisi",
+      "Acil müdahale ile dişin kurtarılma şansı artar",
+      "Kırık ve çatlak dişlerin estetik onarımı",
+      "Çocuğa özel travma sonrası takip protokolü",
+      "Gerektiğinde koruyucu aparey önerisi",
     ],
   },
   {
     icon: ClipboardCheck,
     label: "Kontrol",
-    title: "Periyodik Dis Kontrolu",
-    shortDesc: "Duzenli kontrollerle cocugunuzun agiz sagligini erken donemde koruma altina aliyoruz.",
+    title: "Periyodik Diş Kontrolü",
+    shortDesc: "Düzenli kontrollerle çocuğunuzun ağız sağlığını erken dönemde koruma altına alıyoruz.",
     longDesc:
-      "Duzenli dis kontrolleri, cocugunuzun agiz ve dis sagliginin korunmasinda en temel adimdir. 6 ayda bir yapilan kontroller sayesinde olasi sorunlar erken tespit edilir.",
+      "Düzenli diş kontrolleri, çocuğunuzun ağız ve diş sağlığının korunmasında en temel adımdır. 6 ayda bir yapılan kontroller sayesinde olası sorunlar erken tespit edilir.",
     benefits: [
-      "6 ayda bir duzenli kontrol onerisi",
-      "Erken teshis ile buyuk sorunlari onler",
-      "Cocuga dis bakimi aliskanligi kazandirir",
-      "Tedavi ihtiyacini ve maliyetini azaltir",
+      "6 ayda bir düzenli kontrol önerisi",
+      "Erken teşhis ile büyük sorunları önler",
+      "Çocuğa diş bakımı alışkanlığı kazandırır",
+      "Tedavi ihtiyacını ve maliyetini azaltır",
     ],
   },
 ]
@@ -169,11 +169,11 @@ export function Treatments() {
             Tedavilerimiz
           </span>
           <h2 className="mb-4 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
-            Cocugunuz Icin En Iyi Tedavi Secenekleri
+            Çocuğunuz İçin En İyi Tedavi Seçenekleri
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground lg:text-lg">
-            Uzman pedodonti ekibimiz, modern tekniklerle cocuklara ozel konforlu
-            tedavi sureci sunar.
+            Uzman pedodonti ekibimiz, modern tekniklerle çocuklara özel konforlu
+            tedavi süreci sunar.
           </p>
         </div>
 
@@ -254,7 +254,7 @@ export function Treatments() {
 
                 <div className="mb-6 rounded-xl bg-muted/50 p-4 sm:mb-8 sm:p-6">
                   <h4 className="mb-3 font-serif text-base font-bold text-foreground sm:mb-4 sm:text-lg">
-                    Tedavinin Avantajlari
+                    Tedavinin Avantajları
                   </h4>
                   <ul className="flex flex-col gap-2.5 sm:gap-3">
                     {activeTreatment.benefits.map((benefit, i) => (
@@ -276,7 +276,7 @@ export function Treatments() {
                     className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-5 py-3 text-sm font-bold text-[hsl(var(--accent-foreground))] shadow-md transition-all hover:scale-[1.02] hover:shadow-lg sm:px-6 sm:py-3.5"
                   >
                     <WhatsAppIcon className="h-5 w-5" />
-                    Bu Tedavi Hakkinda Bilgi Al
+                    Bu Tedavi Hakkında Bilgi Al
                   </a>
                   <a
                     href="tel:4442289"
