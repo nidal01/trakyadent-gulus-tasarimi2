@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useRef, useCallback, useEffect } from "react"
-import { ChevronLeft, ChevronRight, Play } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
 const doctors = [
@@ -169,27 +169,27 @@ export function DoctorTeam() {
 
           <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {[
-              "Çocuklarda Diş Bakımı",
-              "Dijital Anestezi Nedir?",
-              "Süt Dişleri Neden Önemli?",
-            ].map((title, index) => (
+              { id: "BAtkRuCgA-U", title: "Çürük Diş Tedavisi Nasıl Yapılır?" },
+              { id: "X6oyv-MlckM", title: "Çocuklarda Ortodonti Tedavisi" },
+              { id: "fqW77gXINag", title: "Pedodonti Nedir? Çocuk Diş Hekimliği" },
+            ].map((video) => (
               <div
-                key={index}
+                key={video.id}
                 className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:shadow-lg"
               >
-                <div className="relative aspect-video overflow-hidden bg-primary/5">
-                  <div className="flex h-full items-center justify-center bg-gradient-to-br from-primary/10 to-[hsl(var(--accent))]/10">
-                    <button
-                      className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/90 text-primary-foreground shadow-lg transition-transform group-hover:scale-110 sm:h-16 sm:w-16"
-                      aria-label={`${title} videosunu oynat`}
-                    >
-                      <Play className="ml-1 h-5 w-5 sm:h-6 sm:w-6" />
-                    </button>
-                  </div>
+                <div className="relative aspect-video overflow-hidden">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${video.id}`}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="h-full w-full"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="p-4">
                   <h3 className="font-serif text-sm font-bold text-foreground sm:text-base">
-                    {title}
+                    {video.title}
                   </h3>
                 </div>
               </div>
