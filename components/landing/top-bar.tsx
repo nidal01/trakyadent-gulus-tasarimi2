@@ -109,7 +109,7 @@ export function StickyHeader() {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="text-sm font-bold text-muted-foreground transition-colors hover:text-primary"
+                    className="text-base font-bold text-muted-foreground transition-colors hover:text-primary"
                   >
                     {item.label}
                   </a>

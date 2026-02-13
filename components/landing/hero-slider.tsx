@@ -192,14 +192,14 @@ export function HeroSlider() {
         {/* Slider controls - desktop only */}
         <button
           onClick={prev}
-          className="absolute bottom-24 right-24 z-10 hidden h-12 w-12 items-center justify-center rounded-full bg-[hsl(0,0%,100%)]/20 text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:bg-[hsl(0,0%,100%)]/40 lg:flex"
+          className="absolute bottom-1/2 left-4 z-10 hidden h-12 w-12 translate-y-1/2 items-center justify-center rounded-full bg-[hsl(0,0%,100%)]/20 text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:bg-[hsl(0,0%,100%)]/40 lg:flex"
           aria-label="Önceki slayt"
         >
           <ChevronLeft className="h-6 w-6" />
         </button>
         <button
           onClick={next}
-          className="absolute bottom-24 right-8 z-10 hidden h-12 w-12 items-center justify-center rounded-full bg-[hsl(0,0%,100%)]/20 text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:bg-[hsl(0,0%,100%)]/40 lg:flex"
+          className="absolute bottom-1/2 right-4 z-10 hidden h-12 w-12 translate-y-1/2 items-center justify-center rounded-full bg-[hsl(0,0%,100%)]/20 text-[hsl(0,0%,100%)] backdrop-blur-sm transition-all hover:bg-[hsl(0,0%,100%)]/40 lg:flex"
           aria-label="Sonraki slayt"
         >
           <ChevronRight className="h-6 w-6" />
