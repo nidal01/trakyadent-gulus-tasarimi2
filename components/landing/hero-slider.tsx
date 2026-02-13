@@ -114,7 +114,10 @@ export function HeroSlider() {
               quality={90}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,40%,12%)]/80 via-[hsl(210,40%,12%)]/50 to-transparent" />
-
+            {/* Google Rating Badge */}
+            <div className="absolute bottom-16 right-4 z-10 sm:bottom-24 sm:right-8 lg:bottom-12 lg:right-12">
+              <GoogleBadge />
+            </div>
             <div className="absolute inset-0 flex items-center">
               <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
                 <div className="max-w-xl lg:max-w-2xl">
@@ -125,10 +128,7 @@ export function HeroSlider() {
                       }`}
                     style={{ transitionDelay: "200ms" }}
                   >
-                    {/* Google Rating Badge */}
-                    <div className="absolute bottom-16 right-4 z-10 sm:bottom-24 sm:right-8 lg:bottom-12 lg:right-12">
-                      <GoogleBadge />
-                    </div>
+
                     <span className="mb-3 inline-block rounded-full bg-[hsl(var(--accent))]/20 px-3 py-1 text-xs font-semibold text-[hsl(var(--accent))] sm:mb-4 sm:px-4 sm:py-1.5 sm:text-sm">
                       Trakyadent Pedodonti Merkezi
                     </span>
