@@ -8,7 +8,7 @@ import { WhatsAppIcon } from "./whatsapp-icon"
 const navItems = [
   { label: "Ana Sayfa", href: "#hero" },
   { label: "Tedavilerimiz", href: "#tedaviler" },
-  { label: "Kliniklerimiz", href: "#klinikler" },
+  { label: "Şubelerimiz", href: "#klinikler" },
   { label: "Neden Trakyadent", href: "#neden-trakyadent" },
   { label: "Ekibimiz", href: "#ekibimiz" },
   { label: "SSS", href: "#sss" },
@@ -57,9 +57,8 @@ export function StickyHeader() {
 
       <div
         ref={headerRef}
-        className={`fixed left-0 right-0 top-0 z-50 transition-transform duration-300 ${
-          visible ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`fixed left-0 right-0 top-0 z-50 transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
         {/* Top Bar */}
         <div className="bg-[hsl(var(--topbar))] text-[hsl(var(--topbar-foreground))]">
@@ -89,9 +88,8 @@ export function StickyHeader() {
 
         {/* Navbar */}
         <nav
-          className={`border-b border-border bg-card/95 backdrop-blur-md ${
-            scrolled ? "shadow-md" : "shadow-sm"
-          }`}
+          className={`border-b border-border bg-card/95 backdrop-blur-md ${scrolled ? "shadow-md" : "shadow-sm"
+            }`}
         >
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:py-5">
             <a href="#hero" className="flex items-center gap-2">
