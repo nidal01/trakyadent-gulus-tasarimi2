@@ -6,7 +6,7 @@ import { Phone } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
 const navItems = [
-  { label: "Ana Sayfa", href: "#hero" },
+  { label: "Anasayfa", href: "#hero" },
   { label: "Tedavilerimiz", href: "#tedaviler" },
   { label: "Şubelerimiz", href: "#klinikler" },
   { label: "Neden Trakyadent", href: "#neden-trakyadent" },
