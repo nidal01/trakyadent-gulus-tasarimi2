@@ -64,7 +64,10 @@ export function StickyButtons() {
         </div>
 
         {/* Bar */}
-        <div className="flex items-stretch  shadow-2xl" style="background-color: #384978 ">
+        <div
+          className="flex items-stretch shadow-2xl"
+          style={{ backgroundColor: "#384978" }}
+        >
           <a
             href="https://wa.me/905001234567"
             target="_blank"
