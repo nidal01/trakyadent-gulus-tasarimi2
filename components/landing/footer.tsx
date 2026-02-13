@@ -49,7 +49,7 @@ export function Footer() {
             <ul className="flex flex-col gap-2">
               {[
                 { label: "Tedavilerimiz", href: "#tedaviler" },
-                { label: "Kliniklerimiz", href: "#klinikler" },
+                { label: "Şubelerimiz", href: "#klinikler" },
                 { label: "Neden Trakyadent", href: "#neden-trakyadent" },
                 { label: "Ekibimiz", href: "#ekibimiz" },
                 { label: "SSS", href: "#sss" },
