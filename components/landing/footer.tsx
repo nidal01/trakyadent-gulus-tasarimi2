@@ -19,6 +19,7 @@ export function Footer() {
                 width={160}
                 height={44}
                 className="h-10 w-auto brightness-0 invert object-contain"
+                style={{ width: "auto" }}
               />
             </div>
             <p className="mb-4 text-sm leading-relaxed text-[hsl(var(--topbar-foreground))]/70">

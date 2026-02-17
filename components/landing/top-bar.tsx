@@ -99,6 +99,7 @@ export function StickyHeader() {
                 width={200}
                 height={56}
                 className="h-12 w-auto object-contain lg:h-14"
+                style={{ width: "auto" }}
                 priority
               />
             </a>

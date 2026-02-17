@@ -111,7 +111,6 @@ export function HeroSlider() {
               className="object-cover object-[center_30%] sm:object-center"
               priority={index === 0}
               sizes="100vw"
-              quality={90}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,40%,12%)]/80 via-[hsl(210,40%,12%)]/50 to-transparent" />
 
