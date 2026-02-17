@@ -137,8 +137,9 @@ export function Footer() {
             mutlaka doktorunuza başvurunuz.
           </p>
         </div>
+        <p>Yazılım ve Tasarım: "Need Solutions</p>
       </div>
-      <p>Yazılım ve Tasarım: "Need Solutions</p>
+
     </footer>
   )
 }
