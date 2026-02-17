@@ -117,6 +117,11 @@ export function HeroSlider() {
             <div className="absolute inset-0 flex items-center">
               <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
                 <div className="max-w-xl lg:max-w-2xl">
+                  {/* Google Badge on mobile - above title */}
+                  <div className="mb-4 sm:hidden">
+                    <GoogleBadge />
+                  </div>
+
                   <div
                     className={`transition-all duration-700 ${index === current
                       ? "translate-y-0 opacity-100"
@@ -183,8 +188,8 @@ export function HeroSlider() {
           </div>
         ))}
 
-        {/* Google Rating Badge */}
-        <div className="absolute bottom-20 right-2 z-10 sm:bottom-24 sm:right-8 lg:bottom-12 lg:right-12">
+        {/* Google Rating Badge - hidden on mobile, shown on sm+ */}
+        <div className="absolute bottom-20 right-2 z-10 hidden sm:bottom-24 sm:right-8 sm:block lg:bottom-12 lg:right-12">
           <GoogleBadge />
         </div>
 

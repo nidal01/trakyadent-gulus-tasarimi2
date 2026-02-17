@@ -125,10 +125,11 @@ export function Clinics() {
                 <div className="mt-auto flex flex-col gap-1.5">
                   <a
                     href={`tel:${clinic.phone.replace(/\s/g, "")}`}
-                    className="flex items-center justify-center gap-1 rounded-lg bg-primary/10 px-2 py-2 text-[10px] font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground sm:gap-1.5 sm:px-3 sm:text-xs"
+                    className="flex items-center justify-center gap-1 rounded-lg bg-primary/10 px-2 py-2 text-[8px] font-semibold leading-tight text-primary transition-colors hover:bg-primary hover:text-primary-foreground sm:gap-1.5 sm:px-3 sm:text-xs"
+                    title={clinic.phone}
                   >
-                    <Phone className="h-3 w-3" />
-                    {clinic.phone}
+                    <Phone className="h-3 w-3 flex-shrink-0" />
+                    <span className="whitespace-nowrap tracking-tighter">{clinic.phone}</span>
                   </a>
                   <a
                     href={`https://wa.me/${clinic.whatsapp}`}

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react"
 import Image from "next/image"
-import { Phone, Stethoscope } from "lucide-react"
+import { Phone } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
 export function StickyButtons() {
@@ -85,7 +85,7 @@ export function StickyButtons() {
             href="tel:02129126867"
             className="flex flex-1 flex-col items-center justify-center gap-1 py-3 text-primary-foreground transition-opacity active:opacity-80"
           >
-            <Stethoscope className="h-5 w-5" />
+            <Phone className="h-5 w-5" />
             <span className="text-[11px] font-bold leading-none">0212 912 68 67</span>
           </a>
         </div>
