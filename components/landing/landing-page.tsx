@@ -12,7 +12,7 @@ import { FAQ } from "./faq"
 import { CTABanner } from "./cta-banner"
 import { Footer } from "./footer"
 import { StickyButtons } from "./sticky-buttons"
-import { PopupBanner } from "./popup-banner"
+
 
 export function LandingPage() {
   return (
@@ -22,17 +22,11 @@ export function LandingPage() {
         <HeroSlider />
         <ContactForm />
         <Treatments />
-        <InlineCTA
-          title="Çocuğunuzun Dişleri Hakkında Bilgi Alın!"
-          subtitle="Uzman pedodonti ekibimiz sizi bilgilendirmek için hazır."
-          image="/images/lp-trakyadent.webp"
-          imageAlt="Trakyadent Kliniği"
-        />
         <Clinics />
         <WhyTrakyadent />
         <InlineCTA
-          title="Ücretsiz Kontrol Randevusu!"
-          subtitle="36 yıllık deneyimimizle çocuğunuzun diş sağlığını kontrol edelim."
+          title="Kontrol Randevusu Alın!"
+          subtitle="36 yıllık deneyim ve uzmanlığımızla, çocuğunuzun diş sağlığını Maslak kliniğimizde güvenle geleceğe taşıyalım."
           image="/images/5891.jpg.jpeg"
           imageAlt="Trakyadent Çorlu Kliniği"
           reversed
@@ -43,7 +37,6 @@ export function LandingPage() {
       </main>
       <Footer />
       <StickyButtons />
-      <PopupBanner />
     </>
   )
 }

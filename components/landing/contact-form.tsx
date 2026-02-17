@@ -6,14 +6,34 @@ import { Send, CheckCircle } from "lucide-react"
 function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
   const [formData, setFormData] = useState({ name: "", phone: "", message: "" })
   const [submitted, setSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({ name: "", phone: "", message: "" })
-    }, 3000)
+    setIsLoading(true)
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+        setTimeout(() => {
+          setSubmitted(false)
+          setFormData({ name: "", phone: "", message: "" })
+        }, 3000)
+      } else {
+        alert("Mesaj gönderilemedi. Lütfen tekrar deneyin.")
+      }
+    } catch (error) {
+      console.error("[v0] Form submission error:", error)
+      alert("Bir hata oluştu. Lütfen tekrar deneyin.")
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const isDark = variant === "dark"
@@ -77,10 +97,11 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
       />
       <button
         type="submit"
-        className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-6 py-3.5 text-sm font-bold text-[hsl(var(--accent-foreground))] shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl sm:text-base"
+        disabled={isLoading}
+        className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-6 py-3.5 text-sm font-bold text-[hsl(var(--accent-foreground))] shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50 sm:text-base"
       >
         <Send className="h-5 w-5" />
-        Hemen Bilgi Al!
+        {isLoading ? "Gönderiliyor..." : "Hemen Bilgi Al!"}
       </button>
     </form>
   )

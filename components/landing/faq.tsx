@@ -130,7 +130,7 @@ export function FAQ() {
                   Pedodonti ekibimizle hemen iletişime geçin.
                 </p>
                 <a
-                  href="https://wa.me/905001234567"
+                  href="https://wa.me/905417265212"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-6 py-3 text-sm font-bold text-[hsl(var(--accent-foreground))] shadow-lg transition-transform hover:scale-105"
@@ -152,7 +152,7 @@ export function FAQ() {
             Pedodonti ekibimizle hemen iletişime geçin.
           </p>
           <a
-            href="https://wa.me/905001234567"
+            href="https://wa.me/905417265212"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-8 py-4 text-base font-bold text-[hsl(var(--accent-foreground))] shadow-lg transition-transform hover:scale-105"

@@ -2,7 +2,7 @@
 
 import React from "react"
 import Image from "next/image"
-import { Phone } from "lucide-react"
+import { Phone, MapPin } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
 const navItems = [
@@ -57,8 +57,7 @@ export function StickyHeader() {
 
       <div
         ref={headerRef}
-        className={`fixed left-0 right-0 top-0 z-50 transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"
-          }`}
+        className={`fixed left-0 right-0 top-0 z-50 transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`}
       >
         {/* Top Bar */}
         <div className="bg-[hsl(var(--topbar))] text-[hsl(var(--topbar-foreground))]">
@@ -68,28 +67,23 @@ export function StickyHeader() {
             </span>
             <div className="flex items-center gap-2 sm:gap-4">
               <a
-                href="tel:4442289"
+                href="tel:02129126867"
                 className="flex items-center gap-1 whitespace-nowrap text-xs transition-colors hover:text-[hsl(var(--chart-4))] sm:gap-1.5 sm:text-sm"
               >
                 <Phone className="h-3 w-3 flex-shrink-0 sm:h-3.5 sm:w-3.5" />
-                <span className="font-semibold">444 22 89</span>
+                <span className="font-semibold">0212 912 68 67</span>
               </a>
-              <a
-                href="https://wa.me/905001234567"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="whitespace-nowrap rounded-md bg-[hsl(var(--accent))] px-2.5 py-1 text-xs font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105 sm:px-3"
-              >
-                Hemen Bilgi Al!
-              </a>
+              <span className="flex items-center gap-1 whitespace-nowrap text-xs sm:gap-1.5 sm:text-sm">
+                <MapPin className="h-3 w-3 flex-shrink-0 sm:h-3.5 sm:w-3.5" />
+                <span className="font-semibold">İstanbul / Maslak</span>
+              </span>
             </div>
           </div>
         </div>
 
         {/* Navbar */}
         <nav
-          className={`border-b border-border bg-card/95 backdrop-blur-md ${scrolled ? "shadow-md" : "shadow-sm"
-            }`}
+          className={`border-b border-border bg-card/95 backdrop-blur-md ${scrolled ? "shadow-md" : "shadow-sm"}`}
         >
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:py-5">
             <a href="#hero" className="flex items-center gap-2">
@@ -99,6 +93,7 @@ export function StickyHeader() {
                 width={200}
                 height={56}
                 className="h-12 w-auto object-contain lg:h-14"
+                style={{ width: "auto" }}
                 priority
               />
             </a>
@@ -118,7 +113,7 @@ export function StickyHeader() {
             </ul>
 
             <a
-              href="https://wa.me/905001234567"
+              href="https://wa.me/905417265212"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden items-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105 lg:flex"
@@ -134,15 +129,9 @@ export function StickyHeader() {
               aria-label="Menüyü aç/kapat"
             >
               <div className="flex flex-col gap-1.5">
-                <span
-                  className={`block h-0.5 w-5 bg-foreground transition-all ${isOpen ? "translate-y-2 rotate-45" : ""}`}
-                />
-                <span
-                  className={`block h-0.5 w-5 bg-foreground transition-all ${isOpen ? "opacity-0" : ""}`}
-                />
-                <span
-                  className={`block h-0.5 w-5 bg-foreground transition-all ${isOpen ? "-translate-y-2 -rotate-45" : ""}`}
-                />
+                <span className={`block h-0.5 w-5 bg-foreground transition-all ${isOpen ? "translate-y-2 rotate-45" : ""}`} />
+                <span className={`block h-0.5 w-5 bg-foreground transition-all ${isOpen ? "opacity-0" : ""}`} />
+                <span className={`block h-0.5 w-5 bg-foreground transition-all ${isOpen ? "-translate-y-2 -rotate-45" : ""}`} />
               </div>
             </button>
           </div>
@@ -164,7 +153,7 @@ export function StickyHeader() {
                 ))}
               </ul>
               <a
-                href="https://wa.me/905001234567"
+                href="https://wa.me/905417265212"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-4 py-2.5 text-sm font-bold text-[hsl(var(--accent-foreground))]"
