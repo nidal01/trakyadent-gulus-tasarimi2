@@ -153,7 +153,7 @@ function TreatmentContent({ treatment }: { treatment: typeof treatments[0] }) {
       </div>
       <div className="flex flex-col gap-2 sm:flex-row sm:gap-3">
         <a
-          href="https://wa.me/905001234567"
+          href="https://wa.me/905417265212"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-4 py-2.5 text-xs font-bold text-[hsl(var(--accent-foreground))] shadow-md transition-all hover:scale-[1.02] hover:shadow-lg sm:px-6 sm:py-3.5 sm:text-sm"
@@ -162,10 +162,10 @@ function TreatmentContent({ treatment }: { treatment: typeof treatments[0] }) {
           Bu Tedavi Hakkında Bilgi Al
         </a>
         <a
-          href="tel:4442289"
+          href="tel:02129126867"
           className="flex items-center justify-center gap-2 rounded-xl border-2 border-primary px-4 py-2.5 text-xs font-bold text-primary transition-colors hover:bg-primary hover:text-primary-foreground sm:px-6 sm:py-3.5 sm:text-sm"
         >
-          444 22 89 Hemen Ara
+          0212 912 68 67 Hemen Ara
         </a>
       </div>
     </div>

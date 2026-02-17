@@ -24,7 +24,7 @@ export function StickyButtons() {
           }`}
       >
         <a
-          href="https://wa.me/905001234567"
+          href="https://wa.me/905417265212"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-[hsl(142,70%,45%)] text-[hsl(0,0%,100%)] shadow-xl transition-transform hover:scale-110"
@@ -34,7 +34,7 @@ export function StickyButtons() {
           <WhatsAppIcon className="relative h-7 w-7" />
         </a>
         <a
-          href="tel:4442289"
+          href="tel:02129126867"
           className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-xl transition-transform hover:scale-110"
           aria-label="Hemen ara"
         >
@@ -69,7 +69,7 @@ export function StickyButtons() {
           style={{ backgroundColor: "#384978" }}
         >
           <a
-            href="https://wa.me/905001234567"
+            href="https://wa.me/905417265212"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-1 flex-col items-center justify-center gap-1 py-3 text-primary-foreground transition-opacity active:opacity-80"
@@ -82,11 +82,11 @@ export function StickyButtons() {
           <div className="w-20" />
 
           <a
-            href="tel:4442289"
+            href="tel:02129126867"
             className="flex flex-1 flex-col items-center justify-center gap-1 py-3 text-primary-foreground transition-opacity active:opacity-80"
           >
             <Stethoscope className="h-5 w-5" />
-            <span className="text-[11px] font-bold leading-none">444 22 89</span>
+            <span className="text-[11px] font-bold leading-none">0212 912 68 67</span>
           </a>
         </div>
       </div>

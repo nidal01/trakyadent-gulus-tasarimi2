@@ -5,14 +5,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
 const doctors = [
-  { name: "Dt. Subaykan PANDAR", title: "Diş Hekimi, Kurucu Yönetim Kurulu Üyesi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/08/subaykan-pandar-1-570x696.jpg" },
-  { name: "Dt. Emre PANDAR", title: "Çerkezköy Klinik Başhekimi, YK. Başkanı", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/11/emre-pandar-2-570x696.jpg" },
-  { name: "Dt. Demet PANDAR", title: "Diş Hekimi, YK. Üyesi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/10/dt-demet-pandar-0001-570x696.jpg" },
-  { name: "Dt. Hikmet AKGÜL", title: "Lüleburgaz Klinik Başhekimi, Lüleburgaz Co-Owner", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/11/dt-hikmet-570x696.jpg" },
-  { name: "Dr. Dt. Ezgi AKÇE", title: "Maslak Klinik Başhekimi, Periodontoloji", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/11/dt-ezgi-akce-maslak-570x696.jpg" },
-  { name: "Dt. Buse KAŞIKÇI", title: "Çorlu Klinik Başhekimi, Çorlu Co-Owner", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/11/buse-2-570x696.jpg" },
-  { name: "Dr. Dt. Fuad NAJAFI", title: "Ağız, Diş ve Çene Cerrahisi, Maslak Co-Owner", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/08/fuad-najafi-1-570x696.jpg" },
-  { name: "Dr. Dt. Burak AKÇE", title: "Ortodonti, Maslak Co-Owner", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/12/dr-dt-burak-akce-570x696.jpg" },
+  { name: "Dt. Subaykan PANDAR", title: "Diş Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/08/subaykan-pandar-1-570x696.jpg" },
+  { name: "Dt. Emre PANDAR", title: "Diş Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/11/emre-pandar-2-570x696.jpg" },
+  { name: "Dt. Demet PANDAR", title: "Diş Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/10/dt-demet-pandar-0001-570x696.jpg" },
+  { name: "Dt. Hikmet AKGÜL", title: "Diş Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/11/dt-hikmet-570x696.jpg" },
+  { name: "Dr. Dt. Ezgi AKÇE", title: "Periodontoloji", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/11/dt-ezgi-akce-maslak-570x696.jpg" },
+  { name: "Dt. Buse KAŞIKÇI", title: "Diş Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/11/buse-2-570x696.jpg" },
+  { name: "Dr. Dt. Fuad NAJAFI", title: "Ağız, Diş ve Çene Cerrahisi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/08/fuad-najafi-1-570x696.jpg" },
+  { name: "Dr. Dt. Burak AKÇE", title: "Ortodonti", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/12/dr-dt-burak-akce-570x696.jpg" },
   { name: "Uzm. Dt. Bahar AKSAN YENİLMEZ", title: "Pedodonti Uzmanı", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/08/bahar-hanim-570x696.jpg" },
   { name: "Uzm. Dt. Ayşegül ATİLLA", title: "Protez Uzmanı", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/12/aysegul-atilla-570x696.jpg" },
   { name: "Uzm. Dt. Ufuk KARACA", title: "Periodontoloji Uzmanı", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/08/ufuk-karaca-1-570x696.jpg" },
@@ -72,7 +72,7 @@ export function DoctorTeam() {
         {/* Header */}
         <div className="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
           <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
-            Uzman Ekibimiz
+            Pedodonti Hekimlerimiz
           </span>
           <h2 className="mb-4 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
             Uzman Hekim Kadromuz
@@ -111,7 +111,6 @@ export function DoctorTeam() {
             {doctors.map((doctor, index) => (
               <div key={index} className="w-44 flex-shrink-0 sm:w-48 lg:w-52">
                 <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
-                  {/* Image - uncropped with aspect ratio preserved */}
                   <div className="flex-shrink-0 overflow-hidden bg-muted">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
@@ -130,7 +129,7 @@ export function DoctorTeam() {
                     </p>
                     <div className="mt-auto flex flex-col gap-1.5">
                       <a
-                        href="https://wa.me/905001234567"
+                        href="https://wa.me/905417265212"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-1.5 rounded-lg bg-[hsl(var(--accent))] px-3 py-2 text-xs font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105"
@@ -139,11 +138,11 @@ export function DoctorTeam() {
                         Randevu Al
                       </a>
                       <a
-                        href="tel:4442289"
+                        href="tel:02129126867"
                         className="flex items-center justify-center gap-1.5 rounded-lg border border-primary bg-primary/5 px-3 py-2 text-xs font-bold text-primary transition-transform hover:scale-105 hover:bg-primary/10"
                       >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
-                        444 22 89
+                        0212 912 68 67
                       </a>
                     </div>
                   </div>
@@ -151,8 +150,6 @@ export function DoctorTeam() {
               </div>
             ))}
           </div>
-
-
         </div>
 
         {/* Doctor videos section */}

@@ -2,7 +2,7 @@
 
 import React from "react"
 import Image from "next/image"
-import { Phone, Instagram, Facebook, Youtube, Twitter } from "lucide-react"
+import { Phone, MapPin, Instagram, Facebook, Youtube, Twitter } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
 export function Footer() {
@@ -73,22 +73,25 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               <li className="flex items-center gap-2 text-sm text-[hsl(var(--topbar-foreground))]/70">
                 <Phone className="h-4 w-4 text-primary" />
-                <a href="tel:4442289" className="transition-colors hover:text-[hsl(var(--topbar-foreground))]">
-                  444 22 89
+                <a href="tel:02129126867" className="transition-colors hover:text-[hsl(var(--topbar-foreground))]">
+                  0212 912 68 67
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm text-[hsl(var(--topbar-foreground))]/70">
                 <WhatsAppIcon className="h-4 w-4 text-[hsl(var(--accent))]" />
                 <a
-                  href="https://wa.me/905001234567"
+                  href="https://wa.me/905417265212"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-[hsl(var(--topbar-foreground))]"
                 >
-                  WhatsApp Destek
+                  0541 726 52 12
                 </a>
               </li>
-
+              <li className="flex items-start gap-2 text-sm text-[hsl(var(--topbar-foreground))]/70">
+                <MapPin className="mt-0.5 h-4 w-4 text-primary" />
+                <span>Maslak Mah. Büyükdere Cad. Nurol Plaza, No: 255, İç Kapı Z01 Sarıyer/İstanbul</span>
+              </li>
             </ul>
           </div>
 
@@ -110,7 +113,7 @@ export function Footer() {
               </li>
             </ul>
             <a
-              href="https://wa.me/905001234567"
+              href="https://wa.me/905417265212"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-4 py-2.5 text-sm font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105"

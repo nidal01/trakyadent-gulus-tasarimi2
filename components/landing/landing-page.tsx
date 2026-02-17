@@ -12,7 +12,7 @@ import { FAQ } from "./faq"
 import { CTABanner } from "./cta-banner"
 import { Footer } from "./footer"
 import { StickyButtons } from "./sticky-buttons"
-import { PopupBanner } from "./popup-banner"
+
 
 export function LandingPage() {
   return (
@@ -31,7 +31,7 @@ export function LandingPage() {
         <Clinics />
         <WhyTrakyadent />
         <InlineCTA
-          title="Ücretsiz Kontrol Randevusu!"
+          title="Kontrol Randevusu Alın!"
           subtitle="36 yıllık deneyimimizle çocuğunuzun diş sağlığını kontrol edelim."
           image="/images/5891.jpg.jpeg"
           imageAlt="Trakyadent Çorlu Kliniği"
@@ -43,7 +43,6 @@ export function LandingPage() {
       </main>
       <Footer />
       <StickyButtons />
-      <PopupBanner />
     </>
   )
 }
