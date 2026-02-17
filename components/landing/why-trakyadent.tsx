@@ -56,7 +56,7 @@ export function WhyTrakyadent() {
           >
             <div className="aspect-video w-full overflow-hidden rounded-2xl bg-muted">
               <iframe
-                src="https://www.youtube.com/embed/gGiEMZudaD4/"
+                src="https://www.youtube.com/embed/9Go74u4JZYQ/"
                 title="Trakyadent Tanıtım"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
