@@ -48,7 +48,7 @@ Vercel sana DNS kayıtlarını verecek. Genelde:
 
 ## 6) Form/API için güvenli ayar (öneri)
 
-Projede `app/api/contact/route.ts` endpoint'i SMTP ayarlarını environment variable üzerinden okuyor. Production'da bu değerleri hosting panelinden güvenli şekilde yönetmelisin.
+
 
 Örnek değişkenler:
 
