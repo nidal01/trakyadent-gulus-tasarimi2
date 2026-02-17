@@ -20,9 +20,8 @@ export function StickyButtons() {
     <>
       {/* Desktop: Fixed right side buttons */}
       <div
-        className={`fixed bottom-8 right-6 z-50 hidden flex-col gap-3 transition-all duration-500 lg:flex ${
-          show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-8 opacity-0"
-        }`}
+        className={`fixed bottom-8 right-6 z-50 hidden flex-col gap-3 transition-all duration-500 lg:flex ${show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-8 opacity-0"
+          }`}
       >
         <a
           href="https://wa.me/905001234567"
@@ -45,34 +44,30 @@ export function StickyButtons() {
 
       {/* Mobile: Fixed bottom bar with center bubble */}
       <div
-        className={`fixed bottom-0 left-0 right-0 z-50 transition-all duration-500 lg:hidden ${
-          show ? "translate-y-0" : "translate-y-full"
-        }`}
+        className={`fixed bottom-0 left-0 right-0 z-50 transition-all duration-500 lg:hidden ${show ? "translate-y-0" : "translate-y-full"
+          }`}
       >
         {/* Center bubble - positioned above the bar */}
-        <div className="absolute -top-8 left-1/2 z-10 -translate-x-1/2">
+        <div className="absolute -top-7 left-1/2 z-10 -translate-x-1/2">
           <a
-            href="https://wa.me/905001234567"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative flex h-16 w-16 items-center justify-center rounded-full border-4 border-card bg-card shadow-xl"
+            href="#hero"
+            className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border-4 border-primary bg-[hsl(0,0%,100%)] shadow-xl"
           >
             <Image
               src="/images/favicon.png"
               alt="Trakyadent"
-              width={40}
-              height={40}
-              className="h-10 w-10 rounded-full object-contain"
+              width={36}
+              height={36}
+              className="h-9 w-9 object-contain"
             />
-            {/* Small WhatsApp badge */}
-            <span className="absolute -bottom-0.5 -right-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-[hsl(142,70%,45%)] shadow-md">
-              <WhatsAppIcon className="h-3.5 w-3.5 text-[hsl(0,0%,100%)]" />
-            </span>
           </a>
         </div>
 
         {/* Bar */}
-        <div className="flex items-stretch bg-primary shadow-2xl">
+        <div
+          className="flex items-stretch shadow-2xl"
+          style={{ backgroundColor: "#384978" }}
+        >
           <a
             href="https://wa.me/905001234567"
             target="_blank"

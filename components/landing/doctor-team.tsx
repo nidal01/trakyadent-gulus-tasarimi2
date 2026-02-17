@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useRef, useCallback, useEffect } from "react"
-import { ChevronLeft, ChevronRight, Play } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import { WhatsAppIcon } from "./whatsapp-icon"
 
 const doctors = [
@@ -75,7 +75,7 @@ export function DoctorTeam() {
             Uzman Ekibimiz
           </span>
           <h2 className="mb-4 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
-            30 Uzman Hekim Kadromuz
+            Uzman Hekim Kadromuz
           </h2>
           <p className="text-base text-muted-foreground lg:text-lg">
             Minik Gülüşler İçin Büyük Uzmanlık! Tüm hekimlerimiz ile tanışın.
@@ -87,19 +87,19 @@ export function DoctorTeam() {
           {canScrollLeft && (
             <button
               onClick={() => scroll("left")}
-              className="absolute -left-2 top-1/3 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-lg transition-all hover:bg-primary hover:text-primary-foreground lg:-left-4 lg:flex"
+              className="absolute -left-1 top-1/3 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card/90 text-foreground shadow-lg backdrop-blur-sm transition-all hover:bg-primary hover:text-primary-foreground sm:h-11 sm:w-11 lg:-left-4"
               aria-label="Önceki hekimler"
             >
-              <ChevronLeft className="h-5 w-5" />
+              <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
           )}
           {canScrollRight && (
             <button
               onClick={() => scroll("right")}
-              className="absolute -right-2 top-1/3 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-lg transition-all hover:bg-primary hover:text-primary-foreground lg:-right-4 lg:flex"
+              className="absolute -right-1 top-1/3 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-card/90 text-foreground shadow-lg backdrop-blur-sm transition-all hover:bg-primary hover:text-primary-foreground sm:h-11 sm:w-11 lg:-right-4"
               aria-label="Sonraki hekimler"
             >
-              <ChevronRight className="h-5 w-5" />
+              <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
           )}
 
@@ -109,17 +109,17 @@ export function DoctorTeam() {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {doctors.map((doctor, index) => (
-              <div key={index} className="w-48 flex-shrink-0 sm:w-52 lg:w-56">
+              <div key={index} className="w-44 flex-shrink-0 sm:w-48 lg:w-52">
                 <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
-                  <div className="relative h-48 flex-shrink-0 overflow-hidden sm:h-56">
+                  {/* Image - uncropped with aspect ratio preserved */}
+                  <div className="flex-shrink-0 overflow-hidden bg-muted">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={doctor.image}
                       alt={doctor.name}
-                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="aspect-[570/696] w-full object-contain transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[hsl(210,40%,12%)]/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                   </div>
                   <div className="flex flex-1 flex-col p-3 text-center sm:p-4">
                     <h3 className="mb-0.5 font-serif text-xs font-bold text-foreground sm:text-sm">
@@ -142,7 +142,7 @@ export function DoctorTeam() {
                         href="tel:4442289"
                         className="flex items-center justify-center gap-1.5 rounded-lg border border-primary bg-primary/5 px-3 py-2 text-xs font-bold text-primary transition-transform hover:scale-105 hover:bg-primary/10"
                       >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
                         444 22 89
                       </a>
                     </div>
@@ -152,12 +152,7 @@ export function DoctorTeam() {
             ))}
           </div>
 
-          {/* Scroll indicator for mobile */}
-          <div className="mt-3 flex items-center justify-center gap-1.5 text-xs text-muted-foreground lg:hidden">
-            <ChevronLeft className="h-3.5 w-3.5" />
-            <span>Kaydırarak tüm hekimleri görün</span>
-            <ChevronRight className="h-3.5 w-3.5" />
-          </div>
+
         </div>
 
         {/* Doctor videos section */}
@@ -174,27 +169,27 @@ export function DoctorTeam() {
 
           <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {[
-              "Çocuklarda Diş Bakımı",
-              "Dijital Anestezi Nedir?",
-              "Süt Dişleri Neden Önemli?",
-            ].map((title, index) => (
+              { id: "BAtkRuCgA-U", title: "Dijital Diş Hekimliği" },
+              { id: "X6oyv-MlckM", title: "Diş Eti Çekilmesi ve Tedavileri" },
+              { id: "fqW77gXINag", title: "Diş Taşı Temizliği, Diş İpi Kullanımı" },
+            ].map((video) => (
               <div
-                key={index}
+                key={video.id}
                 className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:shadow-lg"
               >
-                <div className="relative aspect-video overflow-hidden bg-primary/5">
-                  <div className="flex h-full items-center justify-center bg-gradient-to-br from-primary/10 to-[hsl(var(--accent))]/10">
-                    <button
-                      className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/90 text-primary-foreground shadow-lg transition-transform group-hover:scale-110 sm:h-16 sm:w-16"
-                      aria-label={`${title} videosunu oynat`}
-                    >
-                      <Play className="ml-1 h-5 w-5 sm:h-6 sm:w-6" />
-                    </button>
-                  </div>
+                <div className="relative aspect-video overflow-hidden">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${video.id}`}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="h-full w-full"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="p-4">
                   <h3 className="font-serif text-sm font-bold text-foreground sm:text-base">
-                    {title}
+                    {video.title}
                   </h3>
                 </div>
               </div>

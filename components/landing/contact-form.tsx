@@ -1,8 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
-import Image from "next/image"
-import { Send, Play, CheckCircle } from "lucide-react"
+import { Send, CheckCircle } from "lucide-react"
 
 function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
   const [formData, setFormData] = useState({ name: "", phone: "", message: "" })
@@ -22,22 +21,19 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
   if (submitted) {
     return (
       <div
-        className={`rounded-2xl p-8 text-center ${
-          isDark ? "bg-[hsl(var(--accent))]/20" : "bg-[hsl(var(--accent))]/10"
-        }`}
+        className={`rounded-2xl p-8 text-center ${isDark ? "bg-[hsl(var(--accent))]/20" : "bg-[hsl(var(--accent))]/10"
+          }`}
       >
         <CheckCircle className="mx-auto mb-3 h-12 w-12 text-[hsl(var(--accent))]" />
         <h3
-          className={`mb-2 text-xl font-bold ${
-            isDark ? "text-primary-foreground" : "text-foreground"
-          }`}
+          className={`mb-2 text-xl font-bold ${isDark ? "text-primary-foreground" : "text-foreground"
+            }`}
         >
           Talebiniz Alındı!
         </h3>
         <p
-          className={`text-sm ${
-            isDark ? "text-primary-foreground/80" : "text-muted-foreground"
-          }`}
+          className={`text-sm ${isDark ? "text-primary-foreground/80" : "text-muted-foreground"
+            }`}
         >
           En kısa sürede sizinle iletişime geçeceğiz.
         </p>
@@ -53,11 +49,10 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
         required
         value={formData.name}
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-        className={`rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${
-          isDark
-            ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
-            : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
-        }`}
+        className={`rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${isDark
+          ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
+          : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
+          }`}
       />
       <input
         type="tel"
@@ -65,22 +60,20 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
         required
         value={formData.phone}
         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-        className={`rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${
-          isDark
-            ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
-            : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
-        }`}
+        className={`rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${isDark
+          ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
+          : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
+          }`}
       />
       <textarea
         placeholder="Mesajınız (Opsiyonel)"
         rows={2}
         value={formData.message}
         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-        className={`resize-none rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${
-          isDark
-            ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
-            : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
-        }`}
+        className={`resize-none rounded-xl border-2 px-4 py-3 text-sm focus:outline-none sm:px-5 sm:py-3.5 sm:text-base ${isDark
+          ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-[hsl(var(--accent))]"
+          : "border-border bg-card text-foreground placeholder:text-muted-foreground focus:border-primary"
+          }`}
       />
       <button
         type="submit"
@@ -102,25 +95,16 @@ export function ContactForm() {
         <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Video / visual side */}
           <div className="relative overflow-hidden rounded-2xl">
-            <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-foreground/10">
-              <Image
-                src="/images/cta-child-teeth.jpg"
-                alt="Mutlu çocuk gülümsemesi"
-                fill
-                className="object-cover"
+            <div className="aspect-video w-full overflow-hidden rounded-2xl bg-foreground/10">
+              <iframe
+                src="https://www.youtube.com/embed/R3iy2821E3A"
+                title="Pedodonti Hekimimiz Anlatıyor"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-[hsl(210,40%,12%)]/30">
-                <button
-                  className="flex h-16 w-16 items-center justify-center rounded-full bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] shadow-2xl transition-transform hover:scale-110 sm:h-20 sm:w-20"
-                  aria-label="Videoyu oynat"
-                >
-                  <Play className="ml-1 h-6 w-6 sm:h-8 sm:w-8" />
-                </button>
-              </div>
             </div>
-            <p className="mt-3 text-center text-sm font-medium text-primary-foreground/80">
-              Pedodonti Hekimimiz Anlatıyor
-            </p>
+
           </div>
 
           {/* Form */}

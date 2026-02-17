@@ -1,6 +1,6 @@
 "use client"
 
-import { TopBar, Navbar } from "./top-bar"
+import { StickyHeader } from "./top-bar"
 import { HeroSlider } from "./hero-slider"
 import { ContactForm } from "./contact-form"
 import { Treatments } from "./treatments"
@@ -17,8 +17,7 @@ import { PopupBanner } from "./popup-banner"
 export function LandingPage() {
   return (
     <>
-      <TopBar />
-      <Navbar />
+      <StickyHeader />
       <main className="pb-16 lg:pb-0">
         <HeroSlider />
         <ContactForm />
@@ -26,16 +25,16 @@ export function LandingPage() {
         <InlineCTA
           title="Çocuğunuzun Dişleri Hakkında Bilgi Alın!"
           subtitle="Uzman pedodonti ekibimiz sizi bilgilendirmek için hazır."
-          image="/images/cta-child-teeth.jpg"
-          imageAlt="Mutlu çocuk gülüşü"
+          image="/images/lp-trakyadent.webp"
+          imageAlt="Trakyadent Kliniği"
         />
         <Clinics />
         <WhyTrakyadent />
         <InlineCTA
           title="Ücretsiz Kontrol Randevusu!"
           subtitle="36 yıllık deneyimimizle çocuğunuzun diş sağlığını kontrol edelim."
-          image="/images/clinic-interior.jpg"
-          imageAlt="Trakyadent klinik iç mekan"
+          image="/images/5891.jpg.jpeg"
+          imageAlt="Trakyadent Çorlu Kliniği"
           reversed
         />
         <DoctorTeam />
