@@ -22,17 +22,11 @@ export function LandingPage() {
         <HeroSlider />
         <ContactForm />
         <Treatments />
-        <InlineCTA
-          title="Çocuğunuzun Dişleri Hakkında Bilgi Alın!"
-          subtitle="Uzman pedodonti ekibimiz sizi bilgilendirmek için hazır."
-          image="/images/lp-trakyadent.webp"
-          imageAlt="Trakyadent Kliniği"
-        />
         <Clinics />
         <WhyTrakyadent />
         <InlineCTA
           title="Kontrol Randevusu Alın!"
-          subtitle="36 yıllık deneyimimizle çocuğunuzun diş sağlığını kontrol edelim."
+          subtitle="36 yıllık deneyim ve uzmanlığımızla, çocuğunuzun diş sağlığını Maslak kliniğimizde güvenle geleceğe taşıyalım."
           image="/images/5891.jpg.jpeg"
           imageAlt="Trakyadent Çorlu Kliniği"
           reversed
