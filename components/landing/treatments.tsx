@@ -17,6 +17,20 @@ import { WhatsAppIcon } from "./whatsapp-icon"
 
 const treatments = [
   {
+    icon: Syringe,
+    label: "Dijital Anestezi",
+    title: "Dijital Anestezi",
+    shortDesc: "Ağrısız ve korkusuz tedavi için modern dijital anestezi teknolojisi.",
+    longDesc:
+      "Dijital anestezi, ilacın kontrollü ve yavaş şekilde uygulanmasını sağlayan modern bir uyuşturma yöntemidir. Bu sayede ağrı ve basınç hissi minimuma iner, işlem daha konforlu gerçekleşir.",
+    benefits: [
+      "Kontrollü ve yavaş ilaç uygulaması",
+      "Ağrı ve basınç hissi minimuma iner",
+      "İğne korkusunu azaltır",
+      "Çocuklar için çok daha konforlu bir deneyim",
+    ],
+  },
+  {
     icon: Shield,
     label: "Koruyucu",
     title: "Koruyucu Diş Tedavileri",
@@ -58,20 +72,7 @@ const treatments = [
       "Dijital anestezi ile ağrısız tedavi deneyimi",
     ],
   },
-  {
-    icon: Syringe,
-    label: "Dijital Anestezi",
-    title: "Dijital Anestezi",
-    shortDesc: "Ağrısız ve korkusuz tedavi için modern dijital anestezi teknolojisi.",
-    longDesc:
-      "Dijital anestezi, ilacın kontrollü ve yavaş şekilde uygulanmasını sağlayan modern bir uyuşturma yöntemidir. Bu sayede ağrı ve basınç hissi minimuma iner, işlem daha konforlu gerçekleşir.",
-    benefits: [
-      "Kontrollü ve yavaş ilaç uygulaması",
-      "Ağrı ve basınç hissi minimuma iner",
-      "İğne korkusunu azaltır",
-      "Çocuklar için çok daha konforlu bir deneyim",
-    ],
-  },
+
   {
     icon: SmilePlus,
     label: "Yer Tutucu",
@@ -195,9 +196,8 @@ export function Treatments() {
     <section id="tedaviler" className="bg-background py-16 lg:py-24" ref={ref}>
       <div className="mx-auto max-w-7xl px-4">
         <div
-          className={`mx-auto mb-10 max-w-2xl text-center transition-all duration-700 lg:mb-16 ${
-            visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-          }`}
+          className={`mx-auto mb-10 max-w-2xl text-center transition-all duration-700 lg:mb-16 ${visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+            }`}
         >
           <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
             Tedavilerimiz
@@ -212,9 +212,8 @@ export function Treatments() {
         </div>
 
         <div
-          className={`transition-all duration-700 ${
-            visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-          }`}
+          className={`transition-all duration-700 ${visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+            }`}
           style={{ transitionDelay: "200ms" }}
         >
           {/* Mobile: Accordion */}
@@ -228,34 +227,29 @@ export function Treatments() {
                 >
                   <button
                     onClick={() => setMobileOpen(isOpen ? null : index)}
-                    className={`flex w-full items-center gap-3 px-4 py-3.5 text-left transition-colors ${
-                      isOpen
+                    className={`flex w-full items-center gap-3 px-4 py-3.5 text-left transition-colors ${isOpen
                         ? "bg-primary text-primary-foreground"
                         : "bg-card text-foreground"
-                    }`}
+                      }`}
                   >
                     <div
-                      className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl ${
-                        isOpen ? "bg-primary-foreground/20" : "bg-primary/10"
-                      }`}
+                      className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl ${isOpen ? "bg-primary-foreground/20" : "bg-primary/10"
+                        }`}
                     >
                       <treatment.icon
-                        className={`h-5 w-5 ${
-                          isOpen ? "text-primary-foreground" : "text-primary"
-                        }`}
+                        className={`h-5 w-5 ${isOpen ? "text-primary-foreground" : "text-primary"
+                          }`}
                       />
                     </div>
                     <span className="flex-1 text-sm font-bold">{treatment.title}</span>
                     <ChevronDown
-                      className={`h-5 w-5 flex-shrink-0 transition-transform duration-300 ${
-                        isOpen ? "rotate-180" : ""
-                      } ${isOpen ? "text-primary-foreground" : "text-muted-foreground"}`}
+                      className={`h-5 w-5 flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                        } ${isOpen ? "text-primary-foreground" : "text-muted-foreground"}`}
                     />
                   </button>
                   <div
-                    className={`grid transition-all duration-300 ${
-                      isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                    }`}
+                    className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                      }`}
                   >
                     <div className="overflow-hidden">
                       {isOpen && <TreatmentContent treatment={treatment} />}
@@ -274,16 +268,14 @@ export function Treatments() {
                 <button
                   key={index}
                   onClick={() => setActiveTab(index)}
-                  className={`flex items-center gap-3 rounded-xl px-4 py-3 text-left transition-all ${
-                    activeTab === index
+                  className={`flex items-center gap-3 rounded-xl px-4 py-3 text-left transition-all ${activeTab === index
                       ? "bg-primary text-primary-foreground shadow-lg"
                       : "border border-border bg-card text-foreground hover:bg-muted"
-                  }`}
+                    }`}
                 >
                   <treatment.icon
-                    className={`h-5 w-5 flex-shrink-0 ${
-                      activeTab === index ? "text-primary-foreground" : "text-primary"
-                    }`}
+                    className={`h-5 w-5 flex-shrink-0 ${activeTab === index ? "text-primary-foreground" : "text-primary"
+                      }`}
                   />
                   <span className="text-sm font-semibold">{treatment.title}</span>
                 </button>
