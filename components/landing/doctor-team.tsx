@@ -80,7 +80,7 @@ export function DoctorTeam() {
 
           <div
             ref={scrollRef}
-            className="flex items-stretch gap-4 overflow-x-auto scroll-smooth pb-4 sm:gap-5 lg:gap-6"
+            className="flex items-stretch justify-center gap-4 overflow-x-auto scroll-smooth pb-4 sm:gap-5 lg:gap-6"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {doctors.map((doctor, index) => (
