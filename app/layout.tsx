@@ -16,7 +16,7 @@ const nunitoSans = Nunito_Sans({
 export const metadata: Metadata = {
   title: 'Trakyadent Pedodonti | Çocuk Diş Sağlığı Merkezi',
   description:
-    'Trakyadent Pedodonti Merkezi - Çocuk diş sağlığında uzman çözüm. 36 yıllık deneyim, dijital anestezi ve korkusuz tedavi yaklaşımı. Hemen randevu alın!',
+    'Trakyadent Kids - Çocuk diş sağlığında uzman çözüm. 36 yıllık deneyim, dijital anestezi ve korkusuz tedavi yaklaşımı. Hemen randevu alın!',
   icons: {
     icon: '/images/favicon.png',
     shortcut: '/images/favicon.png',
