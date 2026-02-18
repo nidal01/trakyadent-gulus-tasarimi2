@@ -6,6 +6,9 @@ const normalizedBasePath = rawBasePath
 
 const nextConfig = {
   basePath: normalizedBasePath || undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: normalizedBasePath,
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -17,6 +20,20 @@ const nextConfig = {
         pathname: "/wp-content/uploads/**",
       },
     ],
+  },
+  async redirects() {
+    if (!normalizedBasePath) {
+      return []
+    }
+
+    return [
+      {
+        source: "/images/:path*",
+        destination: `${normalizedBasePath}/images/:path*`,
+        permanent: false,
+        basePath: false,
+      },
+    ]
   },
   async rewrites() {
     if (normalizedBasePath) {
