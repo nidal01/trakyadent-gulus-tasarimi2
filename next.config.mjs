@@ -33,6 +33,12 @@ const nextConfig = {
         permanent: false,
         basePath: false,
       },
+      {
+        source: "/api/:path*",
+        destination: `${normalizedBasePath}/api/:path*`,
+        permanent: false,
+        basePath: false,
+      },
     ]
   },
   async rewrites() {
