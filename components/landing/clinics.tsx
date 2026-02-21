@@ -15,9 +15,9 @@ const maslak = {
 }
 
 const galleryImages = [
-  { src: "/images/3 (2).webp", alt: "Trakyadent Maslak Kliniği - Bekleme Alanı" },
-  { src: "/images/5 (1).webp", alt: "Trakyadent Maslak Kliniği - Tedavi Odası" },
-  { src: "/images/4 (1).webp", alt: "Trakyadent Maslak Kliniği - Resepsiyon" },
+  { src: "/images/3 (2).webp", alt: "Trakyadent Maslak Kliniği - Tedavi Odası" },
+  { src: "/pedodonti-room.webp", alt: "Trakyadent Maslak Kliniği - Tedavi Odası" },
+  { src: "/pedodonti-room-2.webp", alt: "Trakyadent Maslak Kliniği - Tedavi Odası" },
 ]
 
 export function Clinics() {
