@@ -6,7 +6,7 @@ import { WhatsAppIcon } from "./whatsapp-icon"
 
 export function CTABanner() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-primary to-[hsl(199,89%,30%)] py-16 lg:py-20">
+    <section className="relative overflow-hidden bg-primary py-16 lg:py-20">
       {/* Decorative circles */}
       <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-[hsl(var(--accent))]/10" />
       <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-primary-foreground/5" />
