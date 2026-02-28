@@ -7,18 +7,18 @@ import { WhatsAppIcon } from "./whatsapp-icon"
 
 const slides = [
   {
-    image: "/images/hero-child-smile.jpg",
-    title: "Çocuk Diş Sağlığında Uzman Çözüm",
-    titleHighlight: "Trakyadent Kids",
+    image: "/images/hero-smile-design-1.jpg",
+    title: "Gülüşünüzü Yeniden Tasarlayın.",
+    titleHighlight: "Maslak Trakyadent",
     subtitle:
-      "Minik gülüşler için korkusuz, güvenli ve sevgi dolu bir diş tedavi deneyimi",
+      "Uzman ekibimizden gülüş tasarımı hakkında detaylı bilgi alın.",
   },
   {
-    image: "/images/hero-digital-anesthesia.jpg",
-    title: "Konforlu Tedavi,",
-    titleHighlight: "Dijital Anestezi Güvencesi",
+    image: "/images/hero-smile-design-2.jpg",
+    title: "Dijital Planlama ile",
+    titleHighlight: "Kusursuz Gülüş Tasarımı",
     subtitle:
-      "Dijital anestezi sayesinde çocuklar için daha konforlu tedavi",
+      "Yüz hatlarınıza ve beklentilerinize özel, modern teknoloji ile tasarlanmış doğal ve özgüvenli bir gülüş.",
   },
 ]
 
@@ -127,7 +127,7 @@ export function HeroSlider() {
                     style={{ transitionDelay: "200ms" }}
                   >
                     <span className="mb-3 inline-block rounded-full bg-[hsl(var(--accent))]/20 px-3 py-1 text-xs font-semibold text-[hsl(var(--accent))] sm:mb-4 sm:px-4 sm:py-1.5 sm:text-sm">
-                      Trakyadent Kids
+                      Gülüş Tasarımı
                     </span>
                   </div>
 
@@ -164,7 +164,7 @@ export function HeroSlider() {
                     style={{ transitionDelay: "800ms" }}
                   >
                     <a
-                      href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20%C3%A7ocu%C4%9Fum%20i%C3%A7in%20randevu%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
+                      href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20g%C3%BCl%C3%BC%C5%9F%20tasar%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-6 py-3.5 text-base font-bold text-[hsl(var(--accent-foreground))] shadow-lg transition-all hover:scale-105 hover:shadow-xl"
@@ -222,7 +222,7 @@ export function HeroSlider() {
       {/* Mobile CTA buttons - below the image */}
       <div className="flex flex-col gap-2.5 bg-[hsl(210,40%,12%)] px-4 py-4 sm:hidden">
         <a
-          href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20%C3%A7ocu%C4%9Fum%20i%C3%A7in%20randevu%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
+          href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20g%C3%BCl%C3%BC%C5%9F%20tasar%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-5 py-3.5 text-sm font-bold text-[hsl(var(--accent-foreground))] shadow-lg transition-all hover:scale-105"

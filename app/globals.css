@@ -10,34 +10,37 @@
 
 @layer base {
   :root {
-    --background: 200 20% 98%;
-    --foreground: 210 40% 12%;
+    /* Warm off-white background - premium, clean */
+    --background: 36 20% 97%;
+    --foreground: 220 25% 14%;
     --card: 0 0% 100%;
-    --card-foreground: 210 40% 12%;
+    --card-foreground: 220 25% 14%;
     --popover: 0 0% 100%;
-    --popover-foreground: 210 40% 12%;
-    --primary: 199 89% 38%;
+    --popover-foreground: 220 25% 14%;
+    /* Deep navy - primary brand color */
+    --primary: 220 40% 22%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 180 25% 94%;
-    --secondary-foreground: 210 40% 12%;
-    --muted: 200 15% 95%;
-    --muted-foreground: 210 10% 45%;
-    --accent: 152 60% 42%;
+    --secondary: 36 15% 94%;
+    --secondary-foreground: 220 25% 14%;
+    --muted: 36 12% 95%;
+    --muted-foreground: 220 10% 48%;
+    /* Warm gold accent */
+    --accent: 38 72% 50%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 200 15% 88%;
-    --input: 200 15% 88%;
-    --ring: 199 89% 38%;
-    --chart-1: 199 89% 38%;
-    --chart-2: 152 60% 42%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --border: 36 15% 88%;
+    --input: 36 15% 88%;
+    --ring: 38 72% 50%;
+    --chart-1: 220 40% 22%;
+    --chart-2: 38 72% 50%;
+    --chart-3: 220 30% 35%;
+    --chart-4: 38 60% 68%;
+    --chart-5: 36 20% 60%;
     --radius: 0.625rem;
     --whatsapp: 142 70% 45%;
     --whatsapp-foreground: 0 0% 100%;
-    --topbar: 210 40% 15%;
+    --topbar: 220 40% 16%;
     --topbar-foreground: 0 0% 100%;
   }
 }

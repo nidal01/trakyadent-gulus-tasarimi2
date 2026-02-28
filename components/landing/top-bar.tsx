@@ -63,7 +63,7 @@ export function StickyHeader() {
         <div className="bg-[hsl(var(--topbar))] text-[hsl(var(--topbar-foreground))]">
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-0.5 px-3 py-1.5 sm:flex-row sm:gap-0 sm:px-4 sm:py-2">
             <span className="text-center text-[11px] font-medium sm:text-left sm:text-sm">
-              Trakyadent Kids | Sağlıklı Gülüşler İçin Yanınızdayız!
+              Trakyadent | Gülüş Tasarımında Uzman Tercih
             </span>
             <div className="flex items-center gap-2 sm:gap-4">
               <a
@@ -113,7 +113,7 @@ export function StickyHeader() {
             </ul>
 
             <a
-              href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20%C3%A7ocu%C4%9Fum%20i%C3%A7in%20randevu%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
+                href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20g%C3%BCl%C3%BC%C5%9F%20tasar%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden items-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105 lg:flex"
@@ -153,7 +153,7 @@ export function StickyHeader() {
                 ))}
               </ul>
               <a
-                href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20%C3%A7ocu%C4%9Fum%20i%C3%A7in%20randevu%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
+              href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20g%C3%BCl%C3%BC%C5%9F%20tasar%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-4 py-2.5 text-sm font-bold text-[hsl(var(--accent-foreground))]"

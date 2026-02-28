@@ -7,48 +7,44 @@ import { WhatsAppIcon } from "./whatsapp-icon"
 
 const faqs = [
   {
-    q: "Dijital anestezi nedir? Çocuklar için avantajlı mı?",
-    a: "Dijital anestezi, ilacın kontrollü ve yavaş şekilde uygulanmasını sağlayan modern bir uyuşturma yöntemidir. Bu sayede ağrı ve basınç hissi minimuma iner. Özellikle çocuk hastalarda iğne korkusunu azaltarak tedavilerin daha rahat tamamlanmasına yardımcı olur.",
+    q: "Gülüş tasarımı ne kadar sürer?",
+    a: "Gülüş tasarımı süresi yapılacak işlemlere göre değişir. Sadece kaplama uygulanacaksa genellikle 5–7 gün içerisinde tamamlanabilir. İmplant gibi ek cerrahi işlemler varsa süreç uzayabilir.",
   },
   {
-    q: "Çocuklar ilk diş muayenesine ne zaman gitmeli?",
-    a: "İlk dişler çıktıktan sonra, genellikle 1 yaş civarında ilk diş hekimi muayenesi önerilir. Erken yapılan pedodonti kontrolleri, çürük oluşumunu önlemeye ve sağlıklı diş gelişimini takip etmeye yardımcı olur.",
+    q: "Gülüş tasarımı kalıcı mıdır?",
+    a: "Uygulanan materyale göre değişmekle birlikte, düzenli bakım ve kontrollerle uzun yıllar estetik ve fonksiyonel olarak kullanılabilir.",
   },
   {
-    q: "Pedodonti (çocuk diş hekimliği) nedir, hangi tedavileri kapsar?",
-    a: "Pedodonti; bebeklikten ergenlik dönemine kadar çocukların ağız ve diş sağlığıyla ilgilenen uzmanlık alanıdır. Koruyucu uygulamalar, dolgu, kanal tedavisi, diş temizliği, fissür örtücü ve yer tutucu gibi birçok tedaviyi kapsar.",
+    q: "Zirkonyum mu Emax mı daha iyi?",
+    a: "Emax kaplamalar ön diş estetiğinde daha doğal ve ışık geçirgendir. Zirkonyum ise dayanıklılık gerektiren bölgelerde avantaj sağlar. Hangi materyalin uygun olduğu kişiye göre belirlenir.",
   },
   {
-    q: "Çocuklarda diş çürüğü nasıl önlenir?",
-    a: "Düzenli diş fırçalama, sağlıklı beslenme alışkanlıkları ve rutin diş hekimi kontrolleri çürük oluşumunu büyük ölçüde engeller. Pedodonti uzmanı tarafından uygulanan koruyucu tedaviler de dişleri ekstra koruma sağlar.",
+    q: "Porselen kaplama dişlere zarar verir mi?",
+    a: "Uygulama kontrollü ve ölçülü şekilde yapılır. Amaç dişi koruyarak estetik iyileştirme sağlamaktır. Uzman planlama ile güvenli bir işlemdir.",
   },
   {
-    q: "Süt dişleri neden önemlidir? Nasıl korunmalıdır?",
-    a: "Süt dişleri, çocuğun beslenmesi, konuşma gelişimi ve kalıcı dişlerin doğru konumlanması için çok önemlidir. Bu nedenle \"nasıl olsa düşecek\" düşüncesi yerine düzenli bakım ve tedavi ihmal edilmemelidir.",
+    q: "İmplant tedavisi ağrılı mıdır?",
+    a: "İmplant işlemi lokal anestezi altında yapılır ve işlem sırasında ağrı hissedilmez. Sonrasında hafif hassasiyet olabilir ancak genellikle kontrol altındadır.",
   },
   {
-    q: "Çocuğum diş hekiminden korkuyor, ne yapmalıyım?",
-    a: "Pedodonti kliniklerinde çocuklara özel iletişim teknikleri ve konforlu ortamlar kullanılır. Trakyadent'te çocuk psikolojisine uygun yaklaşımla, korku ve kaygıyı en aza indiren bir tedavi süreci planlanır.",
+    q: "İmplant ömrü ne kadardır?",
+    a: "Doğru planlama ve düzenli bakım ile implantlar uzun yıllar sorunsuz kullanılabilir.",
   },
   {
-    q: "Çocuklarda dolgu veya kanal tedavisi yapılır mı?",
-    a: "Evet. Süt dişlerinde oluşan çürükler ilerlediğinde dolgu veya kanal tedavisi gerekebilir. Bu işlemler dişin korunmasını sağlar ve erken diş kaybını önler.",
+    q: "Diş beyazlatma dişe zarar verir mi?",
+    a: "Profesyonel klinik ortamda uygulanan beyazlatma işlemleri diş minesine zarar vermez. Geçici hassasiyet görülebilir.",
   },
   {
-    q: "Fissür örtücü (sealant) nedir, ne işe yarar?",
-    a: "Fissür örtücü, azı dişlerinin çiğneme yüzeyine uygulanan koruyucu bir kaplamadır. Bakterilerin dişe tutunmasını engelleyerek çürük riskini azaltır ve özellikle çocuklarda sık tercih edilir.",
+    q: "Hollywood Smile ile gülüş tasarımı aynı mı?",
+    a: "Hollywood Smile daha beyaz ve dikkat çekici estetik dönüşümü ifade eder. Gülüş tasarımı ise yüz oranlarına göre planlanan daha kişisel bir estetik çalışmadır.",
   },
   {
-    q: "Çocuk diş tedavileri ağrılı mıdır?",
-    a: "Modern teknikler ve uygun anestezi yöntemleri sayesinde pedodonti tedavileri genellikle ağrısız ve konforlu şekilde gerçekleştirilir. Amaç çocuğun rahat bir deneyim yaşamasıdır.",
+    q: "Kaplama yapılan diş çürür mü?",
+    a: "Kaplama altındaki diş, iyi ağız bakımı yapılmazsa risk altında olabilir. Düzenli kontroller ve hijyen çok önemlidir.",
   },
   {
-    q: "Tedavi sırasında anestezi veya sedasyon uygulanır mı?",
-    a: "Gerekli durumlarda lokal anestezi uygulanabilir. İşlem süresi ve çocuğun durumuna göre hekim tarafından en uygun ve güvenli yöntem belirlenir.",
-  },
-  {
-    q: "Pedodonti randevusu ne kadar sürer, süreç nasıl ilerler?",
-    a: "İlk muayenede çocuğun ağız ve diş yapısı değerlendirilir, ardından ihtiyaç duyulan tedaviler planlanır. Çoğu kontrol ve basit işlem kısa sürede tamamlanır, detaylı tedaviler için randevu planlaması yapılır.",
+    q: "Gülüş tasarımı herkese yapılabilir mi?",
+    a: "Genel ağız sağlığı uygun olan çoğu kişiye uygulanabilir. Öncelikle varsa diş eti problemleri veya eksik dişler tedavi edilir, ardından estetik planlama yapılır.",
   },
 ]
 
@@ -63,11 +59,11 @@ export function FAQ() {
             Sık Sorulan Sorular
           </span>
           <h2 className="mb-4 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
-            Pedodonti Hakkında Merak Edilenler!
+            Gülüş Tasarımı ve Estetik Tedaviler Hakkında Merak Edilenler
           </h2>
           <p className="text-lg text-muted-foreground">
-            Çocuk diş sağlığı ve tedavi süreçleriyle ilgili en çok sorulan soruları
-            sizin için yanıtladık.
+            Estetik diş hekimliği uygulamaları, implant ve kaplama tedavileri hakkında en sık sorulan
+            soruları sizin için yanıtladık.
           </p>
         </div>
 
@@ -113,8 +109,8 @@ export function FAQ() {
               {/* Image */}
               <div className="relative mb-6 aspect-[3/4] overflow-hidden rounded-2xl shadow-lg">
                 <Image
-                  src="/images/faq-illustration.jpg"
-                  alt="Pedodonti uzmanı çocuk hastaya anlatıyor"
+                  src="/images/faq-smile-design.jpg"
+                  alt="Gülüş tasarımı uzmanı"
                   fill
                   sizes="380px"
                   className="object-cover"
@@ -127,10 +123,10 @@ export function FAQ() {
                   Başka Sorularınız Mı Var?
                 </h3>
                 <p className="mb-4 text-sm text-primary-foreground/80">
-                  Pedodonti ekibimizle hemen iletişime geçin.
+                  Gülüş tasarımı ekibimizle hemen iletişime geçin.
                 </p>
                 <a
-                  href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20%C3%A7ocu%C4%9Fum%20i%C3%A7in%20randevu%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
+                  href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20g%C3%BCl%C3%BC%C5%9F%20tasar%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-6 py-3 text-sm font-bold text-[hsl(var(--accent-foreground))] shadow-lg transition-transform hover:scale-105"
@@ -149,10 +145,10 @@ export function FAQ() {
             Aklınıza Takılan Başka Sorular Mı Var?
           </h3>
           <p className="mb-6 text-primary-foreground/80">
-            Pedodonti ekibimizle hemen iletişime geçin.
+            Gülüş tasarımı ekibimizle hemen iletişime geçin.
           </p>
           <a
-            href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20%C3%A7ocu%C4%9Fum%20i%C3%A7in%20randevu%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
+            href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20g%C3%BCl%C3%BC%C5%9F%20tasar%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-8 py-4 text-base font-bold text-[hsl(var(--accent-foreground))] shadow-lg transition-transform hover:scale-105"

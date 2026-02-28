@@ -25,10 +25,10 @@ export function LandingPage() {
         <Clinics />
         <WhyTrakyadent />
         <InlineCTA
-          title="Kontrol Randevusu Alın!"
-          subtitle="36 yıllık deneyim ve uzmanlığımızla, çocuğunuzun diş sağlığını Maslak kliniğimizde güvenle geleceğe taşıyalım."
-          image="/images/5891.jpg.jpeg"
-          imageAlt="Trakyadent Çorlu Kliniği"
+          title="Randevunuzu Oluşturun"
+          subtitle="36 yıllık deneyim ve estetik uzmanlığımızla, Maslak kliniğimizde size özel gülüş planlamanızı birlikte oluşturalım."
+          image="/images/cta-smile-result.jpg"
+          imageAlt="Trakyadent Maslak Kliniği"
           reversed
         />
         <DoctorTeam />

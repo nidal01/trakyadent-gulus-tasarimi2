@@ -15,8 +15,8 @@ interface InlineCTAProps {
 export function InlineCTA({
   title,
   subtitle,
-  image = "/images/cta-child-teeth.jpg",
-  imageAlt = "Çocuk diş sağlığı",
+  image = "/images/cta-smile-result.jpg",
+  imageAlt = "Gülüş tasarımı sonucu",
   reversed = false,
 }: InlineCTAProps) {
   return (
