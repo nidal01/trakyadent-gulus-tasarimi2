@@ -15,9 +15,9 @@ const nunitoSans = Nunito_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Trakyadent Kids | Çocuk Diş Sağlığı Merkezi',
+  title: 'Trakyadent Maslak | Gülüş Tasarımı Merkezi',
   description:
-    'Trakyadent Kids - Çocuk diş sağlığında uzman çözüm. 36 yıllık deneyim, dijital anestezi ve korkusuz tedavi yaklaşımı. Hemen randevu alın!',
+    'Trakyadent Maslak - Gülüş tasarımı, Hollywood Smile, zirkonyum kaplama ve implant tedavilerinde uzman klinik. 36 yıllık deneyim, dijital planlama ve kişiye özel estetik çözümler. Hemen randevu alın!',
   icons: {
     icon: '/images/favicon.png',
     shortcut: '/images/favicon.png',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0c7abf',
+  themeColor: '#1a2a45',
   width: 'device-width',
   initialScale: 1,
 }

@@ -27,7 +27,7 @@ export function LandingPage() {
         <InlineCTA
           title="Randevunuzu Oluşturun"
           subtitle="36 yıllık deneyim ve estetik uzmanlığımızla, Maslak kliniğimizde size özel gülüş planlamanızı birlikte oluşturalım."
-          image="/images/lp-trakyadent.jpeg"
+          image="/images/cta-smile-result.jpg"
           imageAlt="Trakyadent Maslak Kliniği"
           reversed
         />

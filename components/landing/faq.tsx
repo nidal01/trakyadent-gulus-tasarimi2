@@ -109,7 +109,7 @@ export function FAQ() {
               {/* Image */}
               <div className="relative mb-6 aspect-[3/4] overflow-hidden rounded-2xl shadow-lg">
                 <Image
-                  src="/images/faq-illustration.jpg"
+                  src="/images/faq-smile-design.jpg"
                   alt="Gülüş tasarımı uzmanı"
                   fill
                   sizes="380px"
