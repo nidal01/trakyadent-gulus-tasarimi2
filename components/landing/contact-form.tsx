@@ -21,7 +21,7 @@ function MiniForm({ variant = "light" }: { variant?: "light" | "dark" }) {
     setIsLoading(true)
 
     try {
-      const response = await fetch("/pedodonti/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -146,10 +146,10 @@ export function ContactForm() {
           {/* Form */}
           <div>
             <h2 className="mb-2 font-serif text-2xl font-extrabold text-primary-foreground sm:text-3xl lg:text-4xl">
-              Çocuğunuz İçin Sağlıklı Bir Gülüşe İlk Adım!
+              Gülüşünüzü Yeniden Tasarlayın.
             </h2>
             <p className="mb-6 text-base text-primary-foreground/80 sm:mb-8 sm:text-lg">
-              Pedodonti Uzmanlarımızdan Detaylı Bilgi Alın!
+              Uzman ekibimizden gülüş tasarımı hakkında detaylı bilgi alın.
             </p>
             <MiniForm variant="dark" />
           </div>

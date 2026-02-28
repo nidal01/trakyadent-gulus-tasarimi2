@@ -8,8 +8,8 @@ const doctors = [
   { name: "Dt. Subaykan PANDAR", title: "Kurucu Yönetim Kurulu Üyesi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/08/subaykan-pandar-1-570x696.jpg" },
   { name: "Dt. Emre PANDAR", title: "Yönetim Kurulu Başkanı", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/11/emre-pandar-2-570x696.jpg" },
   { name: "Dt. Demet PANDAR", title: "Yönetim Kurulu Üyesi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/10/dt-demet-pandar-0001-570x696.jpg" },
-  { name: "Uzm. Dt. Bahar AKSAN YENİLMEZ", title: "Pedodonti Hekimi", image: "/images/bahar-trakyadent (1).jpeg" },
-  { name: "Uzm. Dt. Gamze KILIÇ", title: "Pedodonti Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/12/gamze-hoca-yeni-570x696.jpg" },
+  { name: "Uzm. Dt. Bahar AKSAN YENİLMEZ", title: "Estetik Diş Hekimi", image: "/images/bahar-trakyadent (1).jpeg" },
+  { name: "Uzm. Dt. Gamze KILIÇ", title: "Estetik Diş Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/12/gamze-hoca-yeni-570x696.jpg" },
 ]
 
 export function DoctorTeam() {
@@ -47,13 +47,13 @@ export function DoctorTeam() {
         {/* Header */}
         <div className="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
           <span className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
-            Pedodonti Hekimlerimiz
+            Uzman Hekimlerimiz
           </span>
           <h2 className="mb-4 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
             Uzman Hekim Kadromuz
           </h2>
           <p className="text-base text-muted-foreground lg:text-lg">
-            Minik Gülüşler İçin Büyük Uzmanlık! Tüm hekimlerimiz ile tanışın.
+            Tüm hekimlerimiz ile tanışın.
           </p>
         </div>
 
@@ -104,7 +104,7 @@ export function DoctorTeam() {
                     </p>
                     <div className="mt-auto flex flex-col gap-1.5">
                       <a
-                        href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20%C3%A7ocu%C4%9Fum%20i%C3%A7in%20randevu%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
+                        href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20g%C3%BCl%C3%BC%C5%9F%20tasar%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-1.5 rounded-lg bg-[hsl(var(--accent))] px-3 py-2 text-xs font-bold text-[hsl(var(--accent-foreground))] transition-transform hover:scale-105"
@@ -134,16 +134,16 @@ export function DoctorTeam() {
               Hekimlerimiz Anlatıyor!
             </h2>
             <p className="text-base text-muted-foreground lg:text-lg">
-              Uzman hekimlerimizin bilgilendirici videolarıyla tedavi süreçleri
+              Uzman hekimlerimizin bilgilendirici videolarıyla gülüş tasarımı ve estetik tedavi süreçleri
               hakkında detaylı bilgi alın.
             </p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {[
-              { id: "Z7qlOedllMg", title: "Çocuklarda Dijital Anestezi Nedir?" },
-              { id: "u-KTlvfIJ-Y", title: "Çocuk Diş Tedavisinde Rubber-Dam Kullanımı" },
-              { id: "BF19lesZckw", title: "Çocuklarda ilk diş muayenesi nasıl yapılmalıdır?" },
+              { id: "gGiEMZudaD4", title: "Gülüş Tasarımı Nasıl Yapılır?" },
+              { id: "R3iy2821E3A", title: "Zirkonyum Kaplama Nedir?" },
+              { id: "BF19lesZckw", title: "Hollywood Smile Hakkında Merak Edilenler" },
             ].map((video) => (
               <div
                 key={video.id}

@@ -2,14 +2,13 @@
 
 import React, { useEffect, useRef, useState } from "react"
 import {
-  Shield,
   Sparkles,
-  Heart,
-  Syringe,
-  SmilePlus,
-  Baby,
-  Stethoscope,
-  ClipboardCheck,
+  Star,
+  Crown,
+  Gem,
+  Layers,
+  Anchor,
+  Zap,
   CheckCircle2,
   ChevronDown,
 } from "lucide-react"
@@ -17,116 +16,101 @@ import { WhatsAppIcon } from "./whatsapp-icon"
 
 const treatments = [
   {
-    icon: Syringe,
-    label: "Dijital Anestezi",
-    title: "Dijital Anestezi",
-    shortDesc: "Ağrısız ve korkusuz tedavi için modern dijital anestezi teknolojisi.",
-    longDesc:
-      "Dijital anestezi, ilacın kontrollü ve yavaş şekilde uygulanmasını sağlayan modern bir uyuşturma yöntemidir. Bu sayede ağrı ve basınç hissi minimuma iner, işlem daha konforlu gerçekleşir.",
-    benefits: [
-      "Kontrollü ve yavaş ilaç uygulaması",
-      "Ağrı ve basınç hissi minimuma iner",
-      "İğne korkusunu azaltır",
-      "Çocuklar için çok daha konforlu bir deneyim",
-    ],
-  },
-  {
-    icon: Shield,
-    label: "Koruyucu",
-    title: "Koruyucu Diş Tedavileri",
-    shortDesc: "Fissür örtücü ve flor uygulamaları ile çocuğunuzun dişlerini çürüğe karşı koruyoruz.",
-    longDesc:
-      "Koruyucu diş hekimliği, çocuğunuzun dişlerini çürük oluşmadan koruyan en etkili yöntemdir. Trakyadent Kids olarak, çocuklara özel koruyucu tedaviler ile sağlıklı gülüşlerin temelini atıyoruz.",
-    benefits: [
-      "Fissür örtücü uygulaması ile çürük riskini minimuma indirir",
-      "Profesyonel flor uygulaması ile diş minesini güçlendirir",
-      "Düzenli kontroller ile erken teşhis sağlar",
-      "Ağrısız ve hızlı bir işlem sürecidir",
-    ],
-  },
-  {
     icon: Sparkles,
-    label: "Dolgu",
-    title: "Çocuk Dolgu Tedavisi",
-    shortDesc: "Çocuklara özel estetik dolgu uygulamaları ile sağlıklı ve güzel gülüşler.",
+    label: "Dijital Gülüş Tasarımı",
+    title: "Dijital Gülüş Tasarımı",
+    shortDesc: "Yüz hatlarınıza özel, dijital ortamda planlanan kişiselleştirilmiş gülüş tasarımı.",
     longDesc:
-      "Çocuklarda oluşan diş çürüklerinin zamanında tedavi edilmesi, dişin yapısının korunması ve sağlıklı bir ağız ortamının sürdürülmesi açısından büyük önem taşır. Modern dolgu malzemeleri ile estetik ve dayanıklı çözümler sunuyoruz.",
+      "Dijital gülüş tasarımı, tedaviye başlamadan önce sonucu görmenizi sağlayan modern bir planlama yöntemidir. Yüz simetrisi, diş oranları ve dudak yapısı gözetilerek hazırlanan simülasyonla beklentilerinize tam uygun bir plan oluşturulur.",
     benefits: [
-      "Diş renginde estetik dolgu malzemeleri kullanılır",
-      "Çocuğun rahat etmesi için konforlu tedavi ortamı",
-      "Uzun ömürlü ve dayanıklı dolgu çözümleri",
-      "Tedavi sonrası diş bakımı eğitimi verilir",
+      "Tedavi öncesi dijital simülasyon ile sonucu görün",
+      "Yüz hatlarınıza ve oranlarınıza özel planlama",
+      "Estetik ve fonksiyoneli bir arada sunar",
+      "Daha öngörülebilir ve güvenilir tedavi süreci",
     ],
   },
   {
-    icon: Heart,
-    label: "Kanal",
-    title: "Süt Dişi Kanal Tedavisi",
-    shortDesc: "Süt dişlerinde oluşan ileri çürüklerin tedavisi ile dişin korunmasını sağlıyoruz.",
+    icon: Star,
+    label: "Hollywood Smile",
+    title: "Hollywood Smile",
+    shortDesc: "Beyaz, parlak ve dikkat çekici dişler için Hollywood Smile gülüş dönüşümü.",
     longDesc:
-      "Süt dişlerinde ilerlemiş çürükler nedeniyle sinir dokusuna kadar ulaşan enfeksiyonlar, uygun kanal tedavisi ile kontrol altına alınır. Bu tedavi, dişin erken kaybını önleyerek kalıcı dişlerin doğru konumlanmasını destekler.",
+      "Hollywood Smile, dişlerin şekil, renk ve boyutunu ideal oranlarla yeniden tasarlayan kapsamlı bir estetik uygulamadır. Mükemmel beyazlık ve simetri arayan hastalar için tercih edilen prestijli bir dönüşüm paketidir.",
     benefits: [
-      "Dişin erken kaybını önler",
-      "Kalıcı dişlerin doğru konumlanmasını destekler",
-      "Çocuğun çiğneme ve konuşma fonksiyonunu korur",
-      "Dijital anestezi ile ağrısız tedavi deneyimi",
-    ],
-  },
-
-  {
-    icon: SmilePlus,
-    label: "Yer Tutucu",
-    title: "Yer Tutucu Uygulamaları",
-    shortDesc: "Erken kaybedilen süt dişleri için kalıcı dişlerin doğru konumlanmasını sağlayan yer tutucular.",
-    longDesc:
-      "Erken kaybedilen süt dişlerinin bıraktığı boşluğa komşu dişlerin kaymasını önlemek ve kalıcı dişlerin doğru konumda sürmesini sağlamak amacıyla yer tutucu uygulanır.",
-    benefits: [
-      "Kalıcı dişlerin doğru konumda sürmesini sağlar",
-      "İlerideki ortodontik sorunları önler",
-      "Basit ve ağrısız bir uygulamadır",
-      "Çocuğun çene gelişimini destekler",
+      "Belirgin beyazlık ve kusursuz simetri",
+      "Kaplamalar ile diş şekli ve boyu optimize edilir",
+      "Tek seansta dramatik dönüşüm imkânı",
+      "Uzun yıllar estetik ve fonksiyonel kullanım",
     ],
   },
   {
-    icon: Baby,
-    label: "Bebek Bakımı",
-    title: "Bebek Diş Bakımı",
-    shortDesc: "0-3 yaş arası bebeklerin diş sağlığı takibi ve ailelere bilinçlendirme eğitimi.",
+    icon: Crown,
+    label: "Emax Kaplama",
+    title: "Emax Kaplama",
+    shortDesc: "Işık geçirgenliği sayesinde doğal diş görünümü sunan preslenmiş seramik kaplamalar.",
     longDesc:
-      "Bebeklerin ilk dişleri çıkmaya başladığı andan itibaren ağız bakımı önem kazanır. 0-3 yaş arası bebeklerin diş sağlığı takibini yapıyor, ailelere rehberlik ediyoruz.",
+      "Emax (lityum disilikat) kaplamalar, ön dişlerde en doğal ve estetik görünümü sağlayan seramik sistemdir. Gerçek diş minesiyle neredeyse özdeş ışık geçirgenliği ile doğallığı ve estetiği bir arada sunar.",
     benefits: [
-      "İlk dişten itibaren düzenli takip",
-      "Ailelere bilinçlendirme eğitimi verilir",
-      "Doğru beslenme alışkanlıkları konusunda danışmanlık",
-      "Erken dönemde çürük riskini azaltır",
+      "Doğal diş minesiyle benzer ışık geçirgenliği",
+      "İnce yapısı sayesinde minimal diş kesimi",
+      "Uzun ömürlü ve renk değiştirmeye dayanıklı",
+      "Ön dişlerde en estetik sonucu verir",
     ],
   },
   {
-    icon: Stethoscope,
-    label: "Travma",
-    title: "Diş Travması Tedavisi",
-    shortDesc: "Çocuklarda sık görülen diş kırıklarının acil ve etkili tedavisi.",
+    icon: Gem,
+    label: "Zirkonyum Kaplama",
+    title: "Zirkonyum Kaplama",
+    shortDesc: "Yüksek dayanıklılık ve estetik bir arada; zirkonyum kaplama ile güçlü gülüşler.",
     longDesc:
-      "Çocukluk döneminde düşme, çarpma veya spor yaralanmaları sonucu diş travmaları sıkça yaşanabilir. Travma sonrası hızlı müdahale, dişin kurtarılması için kritik öneme sahiptir.",
+      "Zirkonyum kaplamalar, hem ön hem arka dişlerde güvenle kullanılabilen, biyouyumlu ve son derece dayanıklı bir seramik sistemdir. Metal altyapı içermediğinden diş etinde siyah çizgi oluşumunu önler.",
     benefits: [
-      "Acil müdahale ile dişin kurtarılma şansı artar",
-      "Kırık ve çatlak dişlerin estetik onarımı",
-      "Çocuğa özel travma sonrası takip protokolü",
-      "Gerektiğinde koruyucu aparey önerisi",
+      "Metal içermeyen biyouyumlu yapı",
+      "Arka dişlerde de güvenle uygulanabilir",
+      "Diş eti sağlığını korur",
+      "Uzun ömürlü ve yüksek kırılma direnci",
     ],
   },
   {
-    icon: ClipboardCheck,
-    label: "Kontrol",
-    title: "Periyodik Diş Kontrolü",
-    shortDesc: "Düzenli kontrollerle çocuğunuzun ağız sağlığını erken dönemde koruma altına alıyoruz.",
+    icon: Layers,
+    label: "Porselen Kaplama",
+    title: "Porselen Kaplama",
+    shortDesc: "İnce porselen laminatlar ile dişleri kaplayan minimal invazif estetik çözüm.",
     longDesc:
-      "Düzenli diş kontrolleri, çocuğunuzun ağız ve diş sağlığının korunmasında en temel adımdır. 6 ayda bir yapılan kontroller sayesinde olası sorunlar erken tespit edilir.",
+      "Porselen laminat kaplamalar, dişin yalnızca ön yüzeyine ince bir porselen tabakası yapıştırılmasıyla gerçekleştirilen minimal invazif bir estetik uygulamadır. Renk, şekil ve boydaki kusurlar minimal diş kesimi ile giderilir.",
     benefits: [
-      "6 ayda bir düzenli kontrol önerisi",
-      "Erken teşhis ile büyük sorunları önler",
-      "Çocuğa diş bakımı alışkanlığı kazandırır",
-      "Tedavi ihtiyacını ve maliyetini azaltır",
+      "Minimal diş kesimi ile estetik dönüşüm",
+      "Renk, şekil ve boydaki kusurlar düzeltilir",
+      "Diş rengine uygun doğal görünüm",
+      "Dayanıklı ve uzun ömürlü estetik çözüm",
+    ],
+  },
+  {
+    icon: Anchor,
+    label: "İmplant",
+    title: "İmplant",
+    shortDesc: "Eksik dişler için en kalıcı ve doğal görünümlü çözüm: titanyum implant.",
+    longDesc:
+      "Dental implant, eksik dişlerin yerine titanyum vidalar ile çeneye sabitlenen kalıcı bir tedavi yöntemidir. Doğal diş kökü gibi işlev gören implantlar, gülüş tasarımının vazgeçilmez bir parçasıdır.",
+    benefits: [
+      "Doğal diş kökü gibi işlev görür",
+      "Komşu dişlere zarar vermez",
+      "Kemik kaybını önler, çene yapısını korur",
+      "Doğru bakım ile ömür boyu kullanılabilir",
+    ],
+  },
+  {
+    icon: Zap,
+    label: "Diş Beyazlatma",
+    title: "Diş Beyazlatma",
+    shortDesc: "Profesyonel klinik beyazlatma ile daha parlak ve aydınlık bir gülüş.",
+    longDesc:
+      "Profesyonel diş beyazlatma, diş minesindeki renk pigmentlerini parçalayan özel ajanlarla uygulanan klinik bir işlemdir. Kliniğimizde uygulanan kontrollü yöntemler ile güvenli ve etkili sonuçlar elde edilir.",
+    benefits: [
+      "Klinikte uygulanan güvenli beyazlatma yöntemi",
+      "Kısa sürede belirgin ton açılımı sağlar",
+      "Diş minesine zarar vermez",
+      "Geçici hassasiyet normaldir, uzun süreli etki sağlar",
     ],
   },
 ]
@@ -154,7 +138,7 @@ function TreatmentContent({ treatment }: { treatment: typeof treatments[0] }) {
       </div>
       <div className="flex flex-col gap-2 sm:flex-row sm:gap-3">
         <a
-          href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20%C3%A7ocu%C4%9Fum%20i%C3%A7in%20randevu%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
+          href="https://wa.me/905417265212?text=Merhaba%2C%0AMaslak%20klini%C4%9Finizde%20g%C3%BCl%C3%BC%C5%9F%20tasar%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0AUygun%20saatler%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F%20REF%3A001"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 rounded-xl bg-[hsl(var(--accent))] px-4 py-2.5 text-xs font-bold text-[hsl(var(--accent-foreground))] shadow-md transition-all hover:scale-[1.02] hover:shadow-lg sm:px-6 sm:py-3.5 sm:text-sm"
@@ -203,11 +187,11 @@ export function Treatments() {
             Tedavilerimiz
           </span>
           <h2 className="mb-4 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
-            Çocuğunuz İçin En İyi Tedavi Seçenekleri
+            Kişiye Özel Gülüş Tasarımı Tedavileri
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground lg:text-lg">
-            Uzman pedodonti ekibimiz, modern tekniklerle çocuklara özel konforlu
-            tedavi süreci sunar.
+            Uzman hekim kadromuz, yüz hatlarınıza ve beklentilerinize uygun kişiye özel gülüş
+            tasarımı planlar.
           </p>
         </div>
 
@@ -294,7 +278,7 @@ export function Treatments() {
                       {activeTreatment.title}
                     </h3>
                     <p className="mt-1 text-sm font-medium text-primary">
-                      Trakyadent Kids
+                      Trakyadent Gülüş Tasarımı
                     </p>
                   </div>
                 </div>

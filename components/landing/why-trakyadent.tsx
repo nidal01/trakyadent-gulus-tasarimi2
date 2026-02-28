@@ -7,13 +7,13 @@ import { Users, Clock, ThumbsUp, Building2, Play } from "lucide-react"
 const stats = [
   {
     icon: Users,
-    title: "Uzman Pedodonti Ekibi",
-    desc: "Alanında deneyimli, çocuk psikolojisini bilen uzman hekimler.",
+    title: "Estetik Diş Hekimliğinde Uzman Kadro",
+    desc: "Alanında deneyimli hekimlerimiz, yüz hatlarınıza ve beklentilerinize uygun kişiye özel gülüş tasarımı planlar.",
   },
   {
     icon: Clock,
     title: "36 Yıllık Deneyim",
-    desc: "36 yılı aşkın süre boyunca binlerce aileye güvenle hizmet.",
+    desc: "36 yılı aşkın süre boyunca binlerce hastaya güvenle hizmet.",
   },
   {
     icon: ThumbsUp,
@@ -23,7 +23,7 @@ const stats = [
   {
     icon: Building2,
     title: "4 Modern Klinik",
-    desc: "Son teknoloji donanımlı, çocuk dostu klinikler.",
+    desc: "Gelişmiş dijital ölçüm ve tasarım sistemleri sayesinde tedavi sürecinizi öngörülebilir ve konforlu hale getiriyoruz.",
   },
 ]
 
@@ -98,33 +98,30 @@ export function WhyTrakyadent() {
               Neden Trakyadent?
             </span>
             <h2 className="mb-2 font-serif text-3xl font-extrabold text-foreground lg:text-4xl">
-              Çocuğunuzun Diş Sağlığı İçin Doğru Adres Maslak Trakyadent!
+              Gülüşünüz İçin Doğru Adres: Maslak Trakyadent
             </h2>
             <p className="mb-6 text-lg font-medium text-primary">
-              Deneyim, Uzmanlık ve Güven Bir Arada
+              Deneyim, Estetik ve Güven Bir Arada
             </p>
 
             <div className="mb-6">
               <h3 className="mb-3 font-serif text-xl font-bold text-foreground">
-                Minik Gülüşler İçin Büyük Bir Deneyim
+                Kişiye Özel Tasarlanmış Kusursuz Gülüşler
               </h3>
               <p className="leading-relaxed text-muted-foreground">
-                Trakyadent Ağız ve Diş Sağlığı, 36 yılı aşkın deneyimiyle çocuk
-                diş hekimliği (pedodonti) alanında yüksek standartlarda sağlık
-                hizmeti sunmaktadır. Uzman pedodonti ekibimiz; koruyucu ve tedavi
-                edici uygulamaları, çocuk psikolojisine uygun yaklaşımla konforlu
-                bir deneyime dönüştürür.
+                Trakyadent Ağız ve Diş Sağlığı, 36 yılı aşkın deneyimiyle estetik diş hekimliğinde yüksek
+                standartlarda hizmet sunmaktadır. Uzman hekim kadromuz, yüz hatlarınıza ve
+                beklentilerinize uygun dijital planlama ile doğal ve özgüvenli bir gülüş tasarlar.
               </p>
             </div>
 
             <div>
               <h3 className="mb-3 font-serif text-xl font-bold text-foreground">
-                Bugüne Kadar Binlerce Sağlıklı Gülüşe Eşlik Ettik
+                Bugüne Kadar Binlerce Gülüşü Yeniden Tasarladık
               </h3>
               <p className="leading-relaxed text-muted-foreground">
-                36 yıldır, binlerce aileye hizmet veren kliniğimiz, 4 modern
-                şubesi ve hasta memnuniyeti odaklı yaklaşımıyla çocukların diş
-                sağlığını güvenle korumaya devam etmektedir.
+                Modern teknolojimiz, çok şubeli yapımız ve hasta memnuniyeti odaklı yaklaşımımız ile
+                estetik dönüşüm sürecinizi güvenle yönetiyoruz.
               </p>
             </div>
           </div>
