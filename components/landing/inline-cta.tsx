@@ -15,7 +15,7 @@ interface InlineCTAProps {
 export function InlineCTA({
   title,
   subtitle,
-  image = "/images/cta-smile-result.jpg",
+  image = "/images/smile-design.webp",
   imageAlt = "Gülüş tasarımı sonucu",
   reversed = false,
 }: InlineCTAProps) {
@@ -23,9 +23,8 @@ export function InlineCTA({
     <section className="bg-muted py-14 lg:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <div
-          className={`grid items-center gap-8 lg:grid-cols-2 lg:gap-12 ${
-            reversed ? "lg:[direction:rtl]" : ""
-          }`}
+          className={`grid items-center gap-8 lg:grid-cols-2 lg:gap-12 ${reversed ? "lg:[direction:rtl]" : ""
+            }`}
         >
           {/* Image side */}
           <div className={`relative ${reversed ? "lg:[direction:ltr]" : ""}`}>
