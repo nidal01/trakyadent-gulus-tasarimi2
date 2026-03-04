@@ -157,9 +157,9 @@ export function DoctorTeam() {
 
           <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {[
-              { id: "gGiEMZudaD4", title: "Gülüş Tasarımı Nasıl Yapılır?" },
-              { id: "R3iy2821E3A", title: "Zirkonyum Kaplama Nedir?" },
-              { id: "BF19lesZckw", title: "Hollywood Smile Hakkında Merak Edilenler" },
+              { id: "BFhvhAvorqE", title: "İmplant nedir ?" },
+              { id: "BAtkRuCgA-U", title: "Dijital Diş Hekimliği" },
+              { id: "ppkjvwJR2VU", title: "Diş Temizliği ve Diş Beyazlatma" },
             ].map((video) => (
               <div
                 key={video.id}

@@ -7,14 +7,14 @@ import { WhatsAppIcon } from "./whatsapp-icon"
 
 const slides = [
   {
-    image: "/images/beauty-women-fashion-concept-adorable-feminine-young-caucasian-woman-with-blond-long-hair-red-turtleneck (1) (1).jpg",
+    image: "/images/perfect-healthy-white-teeth-smile-young-woman-dental-health-healthy-skin-concept-dental-clinic-generative-ai.webp",
     title: "Gülüşünüzü Yeniden Tasarlayın.",
     titleHighlight: "Maslak Trakyadent",
     subtitle:
       "Uzman ekibimizden gülüş tasarımı hakkında detaylı bilgi alın.",
   },
   {
-    image: "/images/hero-smile-design-2.jpg",
+    image: "/images/beautiful-woman-smiling-showing-her-perfect-teeth (1).webp",
     title: "Dijital Planlama ile",
     titleHighlight: "Kusursuz Gülüş Tasarımı",
     subtitle:
