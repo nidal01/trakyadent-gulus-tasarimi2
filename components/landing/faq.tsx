@@ -107,7 +107,7 @@ export function FAQ() {
               {/* Image */}
               <div className="relative mb-6 aspect-[3/4] overflow-hidden rounded-2xl shadow-lg">
                 <Image
-                  src="/images/excited-woman-posing-with-black-head-scarf (1).webp"
+                  src="/images/smiling-young-woman-yellow-sweater-with-warm-bokeh-lights.webp"
                   alt="Gülüş tasarımı uzmanı"
                   fill
                   sizes="380px"
