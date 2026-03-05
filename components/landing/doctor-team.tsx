@@ -8,8 +8,10 @@ const doctors = [
   { name: "Dt. Subaykan PANDAR", title: "Kurucu Yönetim Kurulu Üyesi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/08/subaykan-pandar-1-570x696.jpg" },
   { name: "Dt. Emre PANDAR", title: "Yönetim Kurulu Başkanı", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/11/emre-pandar-2-570x696.jpg" },
   { name: "Dt. Demet PANDAR", title: "Yönetim Kurulu Üyesi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/10/dt-demet-pandar-0001-570x696.jpg" },
-  { name: "Dr. Dt. Burak AKÇE", title: "Ortodonti Diş Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/12/dr-dt-burak-akce-570x696.jpg" },
-  { name: "Dr. Dt. Yasemin CANPOLAT", title: "Ortodonti Diş Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2021/12/yasemin-canpolat-570x696.jpg" },
+  { name: "Dr. Dt. Fuad NAJAFI", title: "Diş Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/08/fuad-najafi-1-570x696.jpg" },
+  { name: "Dr. Dt. Ezgi AKÇE", title: "Diş Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/11/dt-ezgi-akce-maslak-570x696.jpg" },
+  { name: "Dt. Pınar ERSAN", title: "Diş Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/12/pinar-hoca-foto-570x696.jpg" },
+  { name: "Uzm. Dt. Mert GÖKSU", title: "Diş Hekimi", image: "https://www.trakyadent.com.tr/wp-content/uploads/2025/12/mert-goksu-570x696.jpg" },
 ]
 
 function DoctorCard({ doctor }: { doctor: { name: string; title: string; image: string } }) {
@@ -120,23 +122,18 @@ export function DoctorTeam() {
             </button>
           )}
 
-          {/* Mobile/tablet: horizontal scroll */}
+          {/* Single scroll carousel for all breakpoints */}
           <div
             ref={scrollRef}
-            className="flex items-stretch gap-4 overflow-x-auto scroll-smooth pb-4 lg:hidden"
+            className="flex items-stretch gap-4 overflow-x-auto scroll-smooth pb-4 sm:gap-5 lg:gap-6"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none", scrollSnapType: "x mandatory" }}
           >
             {doctors.map((doctor, index) => (
-              <div key={index} className="w-44 flex-shrink-0 sm:w-52" style={{ scrollSnapAlign: "start" }}>
-                <DoctorCard doctor={doctor} />
-              </div>
-            ))}
-          </div>
-
-          {/* Desktop: centered flex wrap */}
-          <div className="hidden lg:flex lg:flex-wrap lg:justify-center lg:gap-6">
-            {doctors.map((doctor, index) => (
-              <div key={index} className="w-52">
+              <div
+                key={index}
+                className="w-44 flex-shrink-0 sm:w-52 lg:w-56"
+                style={{ scrollSnapAlign: "start" }}
+              >
                 <DoctorCard doctor={doctor} />
               </div>
             ))}
