@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
             </div>
             
             <p style="font-size: 12px; color: #999; margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
-              Bu e-posta Trakyadent Kids web sitesinden gönderilmiştir.
+              Bu e-posta Trakyadent Gülüş Tasarımı web sitesinden gönderilmiştir.
             </p>
           </div>
         </div>
@@ -93,7 +93,7 @@ export async function POST(request: NextRequest) {
         Telefon: ${phone}
         ${message ? `\nMesaj: ${message}` : ''}
         
-        Bu e-posta Trakyadent Kids web sitesinden gönderilmiştir.
+        Bu e-posta Trakyadent Gülüş Tasarımı web sitesinden gönderilmiştir.
       `,
     }
 
